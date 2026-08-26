@@ -19,43 +19,45 @@ export interface Approach {
 export const approaches: Approach[] = [
  {
  title: 'Trauma Therapy',
- shortTitle: '',
+ slug: 'trauma-therapy',
+ href: '/approaches/trauma-therapy/',
+ shortTitle: 'Trauma Therapy',
  description:
- 'Learn about trauma therapy with Avery Morgan, LPC, in Richmond, Virginia.',
+ 'Learn about trauma therapy with Morgan Hale, LPC, in Bozeman, Montana.',
  cardDescription:
- 'A structured approach that may help some clients work with distressing experiences and the responses connected with them.',
+ 'A supportive approach to understanding distressing experiences and the patterns, emotions, and body responses connected with them.',
  hero:
- 'A structured therapy approach for working with distressing experiences and the reactions connected with them.',
- whatItIsTitle: 'A structured way of working with distressing experiences.',
+ 'A thoughtful approach to working with distressing experiences and the ways they may continue to affect daily life.',
+ whatItIsTitle: 'A paced approach to understanding the impact of difficult experiences.',
  whatItIs: [
- ' stands for Eye Movement Desensitization and Reprocessing. It is a structured therapy approach that can include bilateral stimulation, such as guided eye movements or alternating taps, while working with distressing experiences and related thoughts, emotions, or body responses.',
- 'Avery is an . Whether is used depends on the concern being addressed, readiness for the work, current circumstances, and what feels manageable.',
+ 'Trauma therapy focuses on how distressing or overwhelming experiences may continue to influence thoughts, emotions, relationships, body responses, and patterns of coping.',
+ 'The work can include building awareness, strengthening a sense of safety, developing practical coping strategies, and exploring difficult experiences at a pace that feels manageable.',
  ],
- sessionTitle: 'Preparation and pacing are part of the work.',
+ sessionTitle: 'Safety, pacing, and trust are part of the process.',
  session: [
- ' does not necessarily begin by immediately revisiting the most difficult material. Preparation may include understanding current concerns, identifying resources, and discussing how the process works.',
- ' may be one part of counseling rather than the entire therapy process.',
+ 'Sessions may begin with understanding current concerns, identifying existing strengths and supports, and developing tools for managing distress before moving into more difficult material.',
+ 'The pace and focus of therapy can shift over time depending on current circumstances, readiness, and what feels most helpful.',
  ],
- considerationsTitle: ' is selected collaboratively.',
+ considerationsTitle: 'Trauma work is individualized.',
  considerations: [
- 'Not every client or concern requires .',
- 'The pace can be adjusted according to readiness and current circumstances.',
- 'Other therapeutic approaches may be used alongside when helpful.',
+ 'Not every client needs to discuss difficult experiences in detail for therapy to be useful.',
+ 'The pace can be adjusted according to readiness, current stressors, and the goals of counseling.',
+ 'Other therapeutic approaches may be incorporated when they support the client’s needs and preferences.',
  ],
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
- { label: 'About Avery', href: '/about/avery-morgan/' },
+ { label: 'About Morgan', href: '/about/morgan-hale/' },
  ],
  },
 
  {
  slug: 'internal-family-systems',
  title: 'Internal Family Systems (IFS)',
- seoTitle: 'IFS Therapy | Richmond, VA',
+ seoTitle: 'IFS Therapy | Bozeman, MT',
  shortTitle: 'IFS',
  href: '/approaches/internal-family-systems/',
  description:
- 'Learn how Avery Morgan may incorporate Internal Family Systems concepts into individual counseling in Richmond, Virginia.',
+ 'Learn how Morgan Hale may incorporate Internal Family Systems concepts into individual counseling in Bozeman, Montana.',
  cardDescription:
  'A framework for noticing different internal parts and protective patterns with curiosity rather than judgment.',
  hero:
@@ -67,14 +69,14 @@ export const approaches: Approach[] = [
  ],
  sessionTitle: 'The work can begin with noticing what is happening now.',
  session: [
- 'Avery may help clients notice thoughts, emotions, physical cues, or internal reactions that seem to pull in different directions and explore what those responses may be trying to accomplish.',
+ 'Morgan may help clients notice thoughts, emotions, physical cues, or internal reactions that seem to pull in different directions and explore what those responses may be trying to accomplish.',
  'The work may involve understanding protective patterns and developing a less adversarial relationship with reactions that have felt frustrating, confusing, or difficult to change.',
  ],
  considerationsTitle: 'IFS is one framework among several.',
  considerations: [
  'Clients do not need to use IFS terminology for the work to be useful.',
  'The approach can be adapted to the individual and the focus of counseling.',
- 'Avery may combine IFS concepts with other approaches when that better fits the client.',
+ 'Morgan may combine IFS concepts with other approaches when that better fits the client.',
  ],
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
@@ -86,11 +88,11 @@ export const approaches: Approach[] = [
  {
  slug: 'somatic-experiencing',
  title: 'Somatic Experiencing & Body-Informed Therapy',
- seoTitle: 'Somatic Experiencing Therapy | Richmond, VA',
+ seoTitle: 'Somatic Experiencing Therapy | Bozeman, MT',
  shortTitle: 'Somatic Experiencing',
  href: '/approaches/somatic-experiencing/',
  description:
- 'Learn how Avery Morgan may incorporate Somatic Experiencing and body-informed approaches into individual counseling in Richmond, Virginia.',
+ 'Learn how Morgan Hale may incorporate Somatic Experiencing and body-informed approaches into individual counseling in Bozeman, Montana.',
  cardDescription:
  'An approach that includes attention to physical sensations and body responses alongside thoughts and emotions.',
  hero:
@@ -98,11 +100,11 @@ export const approaches: Approach[] = [
  whatItIsTitle: 'Emotional experiences can also have a physical dimension.',
  whatItIs: [
  'Stress, emotion, and difficult experiences can show up physically through tension, breathing changes, restlessness, numbness, tightness, changes in energy, or other body sensations.',
- 'Avery may incorporate Somatic Experiencing and other body-informed practices to notice these responses, understand what seems to activate or settle them, and include the body as one source of information during counseling.',
+ 'Morgan may incorporate Somatic Experiencing and other body-informed practices to notice these responses, understand what seems to activate or settle them, and include the body as one source of information during counseling.',
  ],
  sessionTitle: 'Body awareness is introduced gently.',
  session: [
- 'When it is useful, Avery may invite attention to physical sensations, movement, breathing, posture, or changes in the body while discussing an experience.',
+ 'When it is useful, Morgan may invite attention to physical sensations, movement, breathing, posture, or changes in the body while discussing an experience.',
  'Clients remain in control of the pace. Attention to body sensations can be brief, adjusted, or set aside when it does not feel useful.',
  ],
  considerationsTitle: 'The body is one source of information.',
@@ -114,18 +116,18 @@ export const approaches: Approach[] = [
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
  { label: 'Anxiety & Stress', href: '/services/anxiety-stress/' },
- { label: 'About Avery', href: '/about/avery-morgan/' },
+ { label: 'About Morgan', href: '/about/morgan-hale/' },
  ],
  },
 
  {
  slug: 'emotionally-focused-therapy',
  title: 'Emotionally Focused Therapy (EFT) for Individuals',
- seoTitle: 'EFT for Individuals in Richmond, VA',
+ seoTitle: 'EFT for Individuals in Bozeman, MT',
  shortTitle: 'EFT',
  href: '/approaches/emotionally-focused-therapy/',
  description:
- 'Learn how Avery Morgan may use Emotionally Focused Therapy principles in individual counseling for adults in Richmond, Virginia.',
+ 'Learn how Morgan Hale may use Emotionally Focused Therapy principles in individual counseling for adults in Bozeman, Montana.',
  cardDescription:
  'An emotion- and attachment-focused approach for understanding patterns that can affect connection and relationships.',
  hero:
@@ -133,11 +135,11 @@ export const approaches: Approach[] = [
  whatItIsTitle: 'Emotions can provide useful information about connection and protection.',
  whatItIs: [
  'Emotionally Focused Therapy, or EFT, pays close attention to emotional experience and patterns involving closeness, safety, conflict, vulnerability, attachment, and connection.',
- 'At Common Ground Therapy, Avery uses these concepts within individual counseling. Common Ground Therapy is not offering couples therapy through this service.',
+ 'At Horizon Therapy, Morgan uses these concepts within individual counseling. Horizon Therapy is not offering couples therapy through this service.',
  ],
  sessionTitle: 'The work may explore patterns beneath the surface.',
  session: [
- 'Avery may help clients notice recurring emotional responses in relationships, identify needs beneath those reactions, and understand what happens when connection feels uncertain, unsafe, or difficult.',
+ 'Morgan may help clients notice recurring emotional responses in relationships, identify needs beneath those reactions, and understand what happens when connection feels uncertain, unsafe, or difficult.',
  'The work may include present relationships as well as earlier experiences that influenced expectations about closeness, trust, conflict, or emotional safety.',
  ],
  considerationsTitle: 'EFT principles can be integrated with individual therapy.',
@@ -149,18 +151,18 @@ export const approaches: Approach[] = [
  related: [
  { label: 'Relationship Concerns', href: '/services/relationship-concerns/' },
  { label: 'Individual Therapy', href: '/services/individual-therapy/' },
- { label: 'About Avery', href: '/about/avery-morgan/' },
+ { label: 'About Morgan', href: '/about/morgan-hale/' },
  ],
  },
 
  {
  slug: 'mindfulness-based-therapy',
  title: 'Mindfulness-Informed Therapy',
- seoTitle: 'Mindfulness-Informed Therapy | Richmond, VA',
+ seoTitle: 'Mindfulness-Informed Therapy | Bozeman, MT',
  shortTitle: 'Mindfulness',
  href: '/approaches/mindfulness-based-therapy/',
  description:
- 'Learn how Avery Morgan may incorporate mindfulness, meditation experience, and body awareness into individual counseling in Richmond, Virginia.',
+ 'Learn how Morgan Hale may incorporate mindfulness, meditation experience, and body awareness into individual counseling in Bozeman, Montana.',
  cardDescription:
  'Present-moment awareness practices that can support noticing thoughts, emotions, and body cues with greater clarity.',
  hero:

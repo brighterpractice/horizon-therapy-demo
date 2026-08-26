@@ -4,7 +4,7 @@ export const navigation = [
     href: '/about/',
     children: [
       { label: 'About Align', href: '/about/' },
-      { label: 'Meet Avery Morgan, LPC', href: '/about/avery-morgan/' },
+      { label: 'Meet Morgan Hale, LPC', href: '/about/morgan-hale/' },
     ],
   },
   {

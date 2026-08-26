@@ -9,135 +9,153 @@ interface Props {
 }
 
 const { eyebrow, title, intro, crumbs } = Astro.props;
+
+const path = Astro.url.pathname;
+const isApproachesOverview =
+  path === '/approaches/' || path === '/approaches';
+
+let scene = '/images/scenes/about-hero.jpg';
+let position = 'center';
+
+if (path.startsWith('/services/')) {
+  scene = '/images/scenes/services-hero.jpg';
+  position = 'center';
+}
+
+if (path.startsWith('/approaches/')) {
+  scene = '/images/scenes/approaches-hero.jpg';
+  position = 'center';
+}
+
+if (path.startsWith('/about/morgan-hale')) {
+  scene = '/images/scenes/clinician-forest.jpg';
+  position = 'center';
+}
+
+if (path === '/about/' || path === '/about') {
+  scene = '/images/scenes/about-hero.jpg';
+  position = 'center';
+}
+
+if (path.startsWith('/contact')) {
+  scene = '/images/scenes/contact-hero.jpg';
+  position = 'center';
+}
 ---
 
-<section class="page-hero">
-  <div class="hero-accent" aria-hidden="true"></div>
+<section
+  class:list={[
+    'page-hero',
+    'scenic-page-hero',
+    { 'scenic-page-hero--approaches-overview': isApproachesOverview }
+  ]}
+  style={`--hero-image:url('${scene}');--hero-position:${position}`}
+>
+  <div class="hero-shade"></div>
 
-  <div class="container page-hero-grid">
+  <div class="container hero-layout">
     <div class="hero-meta">
       {crumbs && <Breadcrumbs items={crumbs} />}
 
-      {eyebrow && (
-        <div class="hero-label">
-          <span></span>
-          <p>{eyebrow}</p>
-        </div>
-      )}
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     </div>
 
-    <div class="hero-main">
+    <div class="hero-content">
       <h1>{title}</h1>
-
-      <div class="intro-wrap">
-        <span class="intro-rule" aria-hidden="true"></span>
-        <p class="intro">{intro}</p>
-      </div>
+      <p class="intro">{intro}</p>
     </div>
   </div>
 </section>
 
 <style>
-  .page-hero {
+  .scenic-page-hero {
     position: relative;
+    display: flex;
+    min-height: clamp(25rem, 48vw, 36rem);
+    align-items: end;
     overflow: hidden;
-    padding: clamp(3.75rem, 8vw, 7rem) 0;
+    padding: clamp(3rem, 7vw, 6rem) 0;
+    background-image: var(--hero-image);
+    background-position: var(--hero-position);
+    background-size: cover;
+  }
+
+  .hero-shade {
+    position: absolute;
+    inset: 0;
     background:
       linear-gradient(
-        120deg,
-        #f8fbfe 0%,
-        #f8efe6 60%,
-        #e6eef7 100%
+        90deg,
+        rgba(8,39,39,.83) 0%,
+        rgba(8,39,39,.59) 46%,
+        rgba(8,39,39,.18) 100%
       );
   }
 
-  .hero-accent {
-    position: absolute;
-    width: 24rem;
-    height: 24rem;
-    right: -10rem;
-    top: -12rem;
-    border: 1px solid rgba(95,130,173,.22);
-    border-radius: 50%;
-  }
-
-  .hero-accent:after {
-    content: "";
-    position: absolute;
-    width: 12rem;
-    height: 12rem;
-    left: -3rem;
-    bottom: -4rem;
-    border: 1px solid rgba(95,130,173,.24);
-    border-radius: 50%;
-  }
-
-  .page-hero-grid {
+  .hero-layout {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: grid;
-    gap: 2rem;
+    width: 100%;
+    gap: 1.5rem;
   }
 
   .hero-meta {
-    align-self: start;
+    align-self: end;
   }
 
-  .hero-label {
-    display: flex;
-    gap: .8rem;
-    align-items: center;
-    margin-top: 1.2rem;
+  .scenic-page-hero :global(.eyebrow) {
+    color: #e3b05b !important;
   }
 
-  .hero-label span {
-    display: block;
-    width: 2.25rem;
-    height: 2px;
-    background: #d36b4c;
-  }
-
-  .hero-label p {
+  .hero-content h1 {
+    max-width: 14ch;
     margin: 0;
-    color: #a35f58;
-    font-size: .78rem;
-    font-weight: 800;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-  }
-
-  .hero-main h1 {
-    max-width: 17ch;
-    margin: 0;
-    font-size: clamp(2.65rem, 6vw, 5rem);
+    color: white !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-weight: 500;
     line-height: .98;
-  }
-
-  .intro-wrap {
-    display: grid;
-    grid-template-columns: 3px 1fr;
-    gap: 1.1rem;
-    max-width: 46rem;
-    margin-top: 2rem;
-  }
-
-  .intro-rule {
-    border-radius: 999px;
-    background: #e6ae8f;
+    letter-spacing: -.04em;
   }
 
   .intro {
-    margin: 0;
-    color: #695b61;
-    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+    max-width: 42rem;
+    margin: 1.3rem 0 0;
+    color: #eef3f0;
+    font-size: clamp(1.03rem, 1.7vw, 1.25rem);
     line-height: 1.65;
   }
 
+  .scenic-page-hero--approaches-overview {
+    min-height: clamp(31rem, 54vw, 42rem);
+  }
+
   @media (min-width:48rem) {
-    .page-hero-grid {
-      grid-template-columns: minmax(12rem,.35fr) minmax(0,1fr);
-      gap: clamp(3rem,7vw,7rem);
-      align-items: start;
+    .hero-layout {
+      grid-template-columns: .3fr 1fr;
+      gap: clamp(3rem,6vw,6rem);
+      align-items: end;
+    }
+  }
+
+  @media (max-width:47.999rem) {
+    .scenic-page-hero {
+      min-height: 31rem;
+      background-position: center;
+    }
+
+    .scenic-page-hero--approaches-overview {
+      min-height: 35rem;
+    }
+
+    .hero-shade {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(8,39,39,.18),
+          rgba(8,39,39,.82)
+        );
     }
   }
 </style>

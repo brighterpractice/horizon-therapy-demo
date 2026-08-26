@@ -1,10 +1,10 @@
 export const practice = {
- name: 'Common Ground Therapy',
- shortName: 'Common Ground Therapy',
- city: 'Richmond',
- state: 'Virginia',
+ name: 'Horizon Therapy',
+ shortName: 'Horizon Therapy',
+ city: 'Bozeman',
+ state: 'Montana',
  stateAbbreviation: 'WI',
- address: 'Richmond, Virginia',
+ address: 'Bozeman, Montana',
  phone: '(970) 555-0148',
  email: 'hello@example.com',
 };
@@ -18,10 +18,10 @@ export const externalLinkAttrs = () => ({
 });
 
 export const site = {
- publicUrl: 'https://common-ground-demo.example',
+ publicUrl: 'https://horizon-therapy-demo.example',
  practice,
  clinician: {
- name: 'Avery Morgan',
+ name: 'Morgan Hale',
  credentials: 'LPC',
  title: 'Licensed Professional Counselor',
  },

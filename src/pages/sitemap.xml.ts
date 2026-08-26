@@ -4,7 +4,7 @@ import { site as siteConfig } from '../data/site';
 const routes = [
   '/',
   '/about/',
-  '/about/avery-morgan/',
+  '/about/morgan-hale/',
   '/services/',
   '/services/individual-therapy/',
   '/services/trauma-ptsd/',
@@ -16,6 +16,7 @@ const routes = [
   '/services/relationship-concerns/',
   '/services/self-esteem-personal-growth/',
   '/approaches/',
+  '/approaches/trauma-therapy/',
   '/approaches/internal-family-systems/',
   '/approaches/somatic-experiencing/',
   '/approaches/emotionally-focused-therapy/',

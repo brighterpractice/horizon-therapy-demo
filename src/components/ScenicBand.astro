@@ -1,0 +1,82 @@
+---
+interface Props {
+  image: string;
+  eyebrow?: string;
+  title?: string;
+  position?: string;
+}
+
+const {
+  image,
+  eyebrow,
+  title,
+  position = 'center'
+} = Astro.props;
+---
+
+<section
+  class="scenic-band"
+  style={`--scene:url('${image}');--scene-position:${position}`}
+>
+  <div class="scenic-band-shade"></div>
+
+  {
+    (eyebrow || title) && (
+      <div class="container scenic-band-content">
+        {eyebrow && <p>{eyebrow}</p>}
+        {title && <h2>{title}</h2>}
+      </div>
+    )
+  }
+</section>
+
+<style>
+  .scenic-band {
+    position: relative;
+    display: flex;
+    min-height: clamp(18rem, 31vw, 29rem);
+    align-items: end;
+    overflow: hidden;
+    background-image: var(--scene);
+    background-position: var(--scene-position);
+    background-size: cover;
+  }
+
+  .scenic-band-shade {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7,36,35,.05),
+        rgba(7,36,35,.58)
+      );
+  }
+
+  .scenic-band-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-bottom: clamp(2rem, 5vw, 4rem);
+  }
+
+  .scenic-band-content p {
+    margin: 0 0 .7rem;
+    color: #e5b65f;
+    font-size: .75rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+
+  .scenic-band-content h2 {
+    max-width: 17ch;
+    margin: 0;
+    color: white !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: 0 2px 12px rgba(0,0,0,.45);
+  }
+</style>

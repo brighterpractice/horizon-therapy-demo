@@ -1,10 +1,10 @@
-:root{--ink:#684052;--body:#695b61;--muted:#81746f;--paper:#fffaf4;--cream:#f7efe5;--sand:#ead9c9;--sage:#c9795c;--sage-dark:#9a5e63;--moss:#7a4d67;--clay:#d36b4c;--clay-text:#d36b4c;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--serif:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--xs:.78rem;--base:clamp(1rem,.97rem + .14vw,1.08rem);--lg:clamp(1.18rem,1.08rem + .45vw,1.45rem);--xl:clamp(1.6rem,1.35rem + 1vw,2.2rem);--xxl:clamp(2.35rem,1.8rem + 2.6vw,4.5rem);--s1:.5rem;--s2:.75rem;--s3:1rem;--s4:1.5rem;--s5:2rem;--s6:3rem;--s7:clamp(4rem,8vw,7.5rem);--container:72rem;--measure:42rem;--radius:1rem;--shadow:0 18px 50px rgba(36,51,47,.09)}
+:root{--ink:#285a56;--body:#695b61;--muted:#81746f;--paper:#fffaf4;--cream:#f6f3ec;--sand:#ead9c9;--sage:#c9795c;--sage-dark:#9a5e63;--moss:#7a4d67;--clay:#d36b4c;--clay-text:#d36b4c;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--serif:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--xs:.78rem;--base:clamp(1rem,.97rem + .14vw,1.08rem);--lg:clamp(1.18rem,1.08rem + .45vw,1.45rem);--xl:clamp(1.6rem,1.35rem + 1vw,2.2rem);--xxl:clamp(2.35rem,1.8rem + 2.6vw,4.5rem);--s1:.5rem;--s2:.75rem;--s3:1rem;--s4:1.5rem;--s5:2rem;--s6:3rem;--s7:clamp(4rem,8vw,7.5rem);--container:72rem;--measure:42rem;--radius:1rem;--shadow:0 18px 50px rgba(36,51,47,.09)}
 *,*:before,*:after{box-sizing:border-box}html{max-width:100%;overflow-x:clip;scroll-behavior:smooth}body{max-width:100%;margin:0;color:var(--body);background:var(--paper);font-family:var(--sans);font-size:var(--base);line-height:1.65;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}a{color:var(--sage-dark);text-underline-offset:.2em}a:hover{color:var(--clay-text)}h1,h2,h3{color:var(--ink);font-family:var(--serif);font-weight:400;line-height:1.14;margin:0 0 var(--s3);text-wrap:balance}h1{font-size:var(--xxl);letter-spacing:-.035em}h2{font-size:var(--xl);letter-spacing:-.02em}h3{font-size:var(--lg);line-height:1.2}p{margin:0 0 var(--s3)}p:last-child{margin-bottom:0}:focus-visible{outline:3px solid var(--clay);outline-offset:4px}.skip-link{position:fixed;top:.75rem;left:.75rem;z-index:100;transform:translateY(-180%);padding:.7rem 1rem;background:var(--ink);color:white}.skip-link:focus{transform:none}.container{width:min(100% - 2rem,var(--container));margin-inline:auto}.container>*,.grid>*{min-width:0}.measure{max-width:var(--measure)}.section{padding-block:3.5rem}.section--tint{background:var(--cream)}.section--dark{background:var(--moss);color:#eaf0ec}.section--dark h2{color:white}.eyebrow{color:var(--clay-text);font-size:var(--xs);font-weight:800;line-height:1.4;letter-spacing:.13em;text-transform:uppercase}.section--dark .eyebrow{color:#eaf0ec}.grid{display:grid;gap:var(--s4)}.card{height:100%;padding:1.35rem;border:1px solid var(--sand);border-radius:var(--radius);background:rgba(255,255,255,.78);box-shadow:0 8px 30px rgba(36,51,47,.04)}.card p{line-height:1.6}.link-arrow{font-weight:700;text-decoration:none}.link-arrow:after{content:" →"}.button{display:inline-flex;min-height:3rem;align-items:center;justify-content:center;padding:.72rem 1.15rem;border:1px solid var(--moss);border-radius:999px;background:var(--moss);color:white;font-size:.92rem;font-weight:750;line-height:1.2;text-align:center;text-decoration:none}.button:hover{background:var(--sage-dark);color:white}.button--light{border-color:white;background:white;color:var(--moss)}.button--outline{background:transparent;color:var(--moss)}.mobile-appointment{position:fixed;z-index:40;right:max(.5rem,env(safe-area-inset-right));bottom:max(.5rem,env(safe-area-inset-bottom));width:auto;max-width:calc(100vw - 1rem);height:44px;min-height:44px;padding:.35rem .7rem;font-size:.8rem;white-space:nowrap;box-shadow:0 6px 18px rgba(36,51,47,.22)}main{min-height:60vh}
 .service-link{display:block;color:var(--body);text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.service-link:hover{color:var(--body)}@media(hover:hover){.service-link:hover{border-color:var(--sage);box-shadow:var(--shadow);transform:translateY(-2px)}}
 @media(max-width:47.999rem){.mobile-appointment{transition:opacity .18s ease,transform .18s ease;will-change:opacity,transform}.mobile-appointment.is-retreating{pointer-events:none;opacity:0;transform:translateY(calc(100% + 2rem))}.hero [data-track="request-appointment"],.section--dark [data-track="request-appointment"],footer [data-track="request-appointment"]{display:none}}
 @media(min-width:48rem){body{line-height:1.7}.container{width:min(100% - 4rem,var(--container))}.section{padding-block:var(--s7)}.grid--2{grid-template-columns:repeat(2,1fr)}.grid--3{grid-template-columns:repeat(3,1fr)}.card{padding:clamp(1.35rem,3vw,2.25rem)}.mobile-appointment{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
-/* Common Ground Therapy visual system */
+/* Horizon Therapy visual system */
 
 body {
   background:
@@ -69,7 +69,7 @@ h3 {
   background:
     linear-gradient(
       135deg,
-      #684052,
+      #285a56,
       #7a4d67
     );
 }
@@ -78,7 +78,7 @@ h3 {
   background:
     linear-gradient(
       135deg,
-      #f7efe5,
+      #f6f3ec,
       #fffaf4
     );
 }
@@ -191,7 +191,7 @@ h3 {
 
 .site-footer,
 footer {
-  background: #684052 !important;
+  background: #285a56 !important;
   color: #f1e6e2 !important;
 }
 
@@ -211,7 +211,7 @@ footer a:hover,
   background:
     linear-gradient(
       135deg,
-      #684052,
+      #285a56,
       #76505a
     ) !important;
   color: #f7ece7 !important;
@@ -263,21 +263,21 @@ footer a:hover,
 
 :root {
   --cg-ink: #4d3040;
-  --cg-plum: #7f4565;
-  --cg-plum-dark: #5f3650;
+  --cg-plum: #315f5b;
+  --cg-plum-dark: #103d3d;
 
-  --cg-terracotta: #d85f40;
-  --cg-coral: #f18767;
+  --cg-terracotta: #c79138;
+  --cg-coral: #d6b98d;
   --cg-peach: #f7b18f;
 
-  --cg-gold: #e5aa35;
+  --cg-gold: #d8a244;
   --cg-gold-soft: #f4cf78;
 
   --cg-sage: #788873;
 
-  --cg-cream: #fff8ed;
+  --cg-cream: #f7f3eb;
   --cg-paper: #fffdf8;
-  --cg-blush: #fae8dc;
+  --cg-blush: #f6f3ec;
 }
 
 body {
@@ -436,5 +436,457 @@ blockquote {
   .cg-final h2 {
     font-size: clamp(2.15rem, 11vw, 3.25rem) !important;
     line-height: 1.02 !important;
+  }
+}
+
+/* =======================================================
+   HORIZON THERAPY — authoritative visual palette
+   ======================================================= */
+
+:root {
+  --hz-deep: #103d3d;
+  --hz-teal: #2f6663;
+  --hz-forest: #5f746b;
+  --hz-sage: #a6b69f;
+
+  --hz-gold: #d8a244;
+  --hz-gold-dark: #b77c27;
+  --hz-gold-soft: #ead6aa;
+
+  --hz-cream: #f6f3ec;
+  --hz-sand: #e7d7b6;
+  --hz-paper: #fffdf8;
+
+  --hz-text: #3e514d;
+  --hz-muted: #697a75;
+}
+
+/* Base */
+body {
+  background: var(--hz-paper) !important;
+  color: var(--hz-text) !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--hz-deep) !important;
+}
+
+/* Small labels */
+.eyebrow,
+.hero-label,
+.hand-label,
+.kicker {
+  color: var(--hz-gold-dark) !important;
+}
+
+/* Links */
+.link-arrow,
+.hz-text-link,
+.underlined-link,
+.align-outline-link {
+  color: var(--hz-teal) !important;
+}
+
+/* Main buttons */
+.button,
+a.button,
+button.button {
+  background: var(--hz-gold) !important;
+  border-color: var(--hz-gold) !important;
+  color: #163b3a !important;
+}
+
+.button:hover,
+a.button:hover,
+button.button:hover {
+  background: var(--hz-gold-dark) !important;
+  border-color: var(--hz-gold-dark) !important;
+  color: white !important;
+}
+
+/* Light button variation */
+.button--light {
+  background: var(--hz-cream) !important;
+  border-color: var(--hz-cream) !important;
+  color: var(--hz-deep) !important;
+}
+
+/* Cards */
+.card,
+.service-card {
+  border-color: rgba(47,102,99,.18) !important;
+  background: rgba(255,253,248,.94) !important;
+  box-shadow: 0 12px 32px rgba(16,61,61,.07) !important;
+}
+
+/* Tint sections */
+.section--tint {
+  background: var(--hz-cream) !important;
+}
+
+/* Dark sections */
+.section--dark {
+  background:
+    linear-gradient(
+      135deg,
+      #103d3d,
+      #285a56
+    ) !important;
+  color: #edf3ef !important;
+}
+
+.section--dark h2,
+.section--dark h3 {
+  color: white !important;
+}
+
+/* Footer */
+.site-footer,
+footer {
+  background: #103d3d !important;
+  color: #dce7e1 !important;
+}
+
+.site-footer a,
+footer a {
+  color: #e8f0ec !important;
+}
+
+.site-footer a:hover,
+footer a:hover {
+  color: var(--hz-gold-soft) !important;
+}
+
+.site-footer .footer-label,
+footer .footer-label {
+  color: var(--hz-gold) !important;
+}
+
+/* Avoid any inherited decorative hair-line circles */
+.hero-accent,
+.location-ring,
+.visual-circle {
+  display: none !important;
+}
+
+/* Horizon scenic transition above footer */
+.horizon-footer-scene {
+  min-height: clamp(12rem, 25vw, 20rem);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16,61,61,0),
+      rgba(16,61,61,.18)
+    ),
+    url('/images/scenes/water-feature.jpg') center 62% / cover no-repeat;
+}
+
+.menu-overlay[hidden] {
+  display: none !important;
+}
+
+/* Horizon navigation + breadcrumb color cleanup */
+
+.hz-header a,
+.hz-header button {
+  --nav-accent: #d8a244;
+}
+
+.menu-primary a,
+.menu-secondary a {
+  color: #edf3ef !important;
+}
+
+.menu-primary a.active {
+  color: #b7c8bd !important;
+}
+
+.menu-primary a:hover {
+  color: #ffffff !important;
+}
+
+.menu-primary span {
+  color: #91aaa2 !important;
+}
+
+/* Interior navigation / breadcrumbs */
+.breadcrumbs,
+.breadcrumbs a,
+.breadcrumbs span,
+nav[aria-label="Breadcrumb"] a,
+nav[aria-label="Breadcrumb"] span {
+  color: #d5e2dc !important;
+}
+
+.breadcrumbs a:hover,
+nav[aria-label="Breadcrumb"] a:hover {
+  color: #ffffff !important;
+}
+
+/* Keep section eyebrow gold, but not orange */
+.scenic-page-hero .eyebrow {
+  color: #e1b259 !important;
+}
+
+.scenic-page-hero .hero-layout {
+  box-sizing: border-box;
+  padding-left: clamp(1.4rem, 4vw, 3rem);
+  padding-right: clamp(1.4rem, 4vw, 3rem);
+}
+
+@media (max-width: 47.999rem) {
+  .scenic-page-hero .hero-layout {
+    padding-left: 1.35rem;
+    padding-right: 1.35rem;
+  }
+}
+
+/* =======================================================
+   Horizon cleanup — remove inherited Common Ground colors
+   ======================================================= */
+
+a {
+  --hz-link: #2f6663;
+}
+
+main a:not(.button):not(.appointment-pill):not(.hero-secondary):not(.scenic-link) {
+  color: var(--hz-link);
+}
+
+.eyebrow,
+.hand-label,
+.kicker,
+.hero-label {
+  color: #b77c27 !important;
+}
+
+/* Breadcrumbs on scenic heroes */
+.scenic-page-hero nav,
+.scenic-page-hero .breadcrumbs {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.scenic-page-hero nav a,
+.scenic-page-hero .breadcrumbs a {
+  color: #e7d6ad !important;
+}
+
+.scenic-page-hero nav span,
+.scenic-page-hero .breadcrumbs span {
+  color: rgba(255,255,255,.72) !important;
+}
+
+/* Make sure shared containers always have safe side padding */
+.container {
+  width: min(100% - 2.5rem, 76rem);
+  margin-inline: auto;
+}
+
+@media (max-width:47.999rem) {
+  .container {
+    width: min(100% - 2rem, 76rem);
+  }
+}
+
+/* =======================================================
+   Horizon cinematic readability + spacing
+   ======================================================= */
+
+/* Keep page content away from viewport edges. */
+.hz-hero .hero-inner,
+.scenic-page-hero .hero-layout {
+  width: min(100% - 3rem, 82rem) !important;
+  margin-inline: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Header sits over imagery, so hero content needs clearance. */
+.hz-hero {
+  padding-top: 8rem;
+}
+
+/* Homepage photography typography */
+.hz-hero .hero-copy h1 {
+  color: #ffffff !important;
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.4),
+    0 1px 2px rgba(0,0,0,.35);
+}
+
+.hz-hero .hero-copy h1 em {
+  color: #e5b65f !important;
+}
+
+.hz-hero .hero-copy > p {
+  color: #f4f7f5 !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,.48);
+}
+
+.hz-hero .hero-kicker {
+  color: #e5b65f !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,.5);
+}
+
+/* Stronger hero image shading */
+.hz-hero .hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,31,31,.88) 0%,
+      rgba(5,31,31,.72) 36%,
+      rgba(5,31,31,.34) 68%,
+      rgba(5,31,31,.10) 100%
+    ) !important;
+}
+
+/* Scenic bands */
+.hz-scenic h1,
+.hz-scenic h2,
+.hz-scenic h3,
+.hz-scenic p,
+.scenic-page-hero h1,
+.scenic-page-hero h2,
+.scenic-page-hero .intro {
+  color: #ffffff !important;
+}
+
+.hz-scenic h2,
+.scenic-page-hero h1 {
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.5),
+    0 1px 2px rgba(0,0,0,.4);
+}
+
+.hz-scenic p,
+.scenic-page-hero .intro {
+  text-shadow: 0 1px 8px rgba(0,0,0,.5);
+}
+
+.hz-scenic .eyebrow,
+.scenic-page-hero .eyebrow {
+  color: #e5b65f !important;
+}
+
+.hz-scenic .scenic-overlay {
+  background: rgba(5,35,34,.64) !important;
+}
+
+.hz-scenic .water-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,35,34,.84),
+      rgba(5,35,34,.42)
+    ) !important;
+}
+
+/* Interior scenic hero */
+.scenic-page-hero .hero-shade {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,35,34,.88) 0%,
+      rgba(5,35,34,.67) 48%,
+      rgba(5,35,34,.22) 100%
+    ) !important;
+}
+
+/* Breadcrumb visibility and safe alignment */
+.scenic-page-hero .breadcrumbs,
+.scenic-page-hero nav[aria-label="Breadcrumb"] {
+  margin: 0 !important;
+}
+
+.scenic-page-hero .breadcrumbs a,
+.scenic-page-hero .breadcrumbs span,
+.scenic-page-hero nav[aria-label="Breadcrumb"] a,
+.scenic-page-hero nav[aria-label="Breadcrumb"] span {
+  color: #f1e5c8 !important;
+  text-shadow: 0 1px 5px rgba(0,0,0,.55);
+}
+
+@media (max-width:47.999rem) {
+  .hz-hero .hero-inner,
+  .scenic-page-hero .hero-layout {
+    width: calc(100% - 2.25rem) !important;
+  }
+
+  .hz-hero {
+    padding-top: 6rem;
+  }
+}
+
+.hz-header .hz-brand img {
+  width: clamp(10.5rem, 15vw, 14rem) !important;
+  height: auto !important;
+  image-rendering: auto;
+}
+
+@media (max-width:47.999rem) {
+  .hz-header .hz-brand img {
+    width: 8.5rem !important;
+  }
+}
+
+/* =======================================================
+   Horizon interior page rhythm
+   ======================================================= */
+
+main .section {
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+main .section:not(.section--dark):not(.section--tint) {
+  background: #fffdf8;
+}
+
+main .section--tint {
+  background:
+    linear-gradient(
+      135deg,
+      #f1eee5,
+      #e7ede6
+    ) !important;
+}
+
+/* Create visual separation without giant empty gaps. */
+main .section + .section {
+  border-top: 1px solid rgba(47,102,99,.10);
+}
+
+/* Slightly richer cards for Horizon interior pages. */
+main .card {
+  border-radius: .35rem !important;
+  background: rgba(255,253,248,.94) !important;
+}
+
+.hz-about-morgan {
+  padding: clamp(4rem, 7vw, 6rem) 0;
+  background: #f3efe6;
+}
+
+.hz-about-morgan-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.hz-about-morgan h2 {
+  color: #173f3f !important;
+}
+
+@media (min-width:48rem) {
+  .hz-about-morgan-grid {
+    grid-template-columns: .9fr 1.1fr;
+    gap: clamp(3rem,7vw,7rem);
+    align-items: center;
   }
 }

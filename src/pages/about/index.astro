@@ -1,20 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import ScenicBand from '../../components/ScenicBand.astro';
 import { breadcrumbSchema, pageSchema } from '../../lib/schema';
 
-const crumbs = [{ label: 'About Common Ground Therapy' }];
+const crumbs = [{ label: 'About Horizon Therapy' }];
 ---
 
 <Layout
-  title="About Common Ground Therapy | Richmond, Virginia"
-  description="Learn about Common Ground Therapy, a private counseling practice for adults in Richmond, Virginia."
+  title="About Horizon Therapy | Bozeman, Montana"
+  description="Learn about Horizon Therapy, a private counseling practice for adults in Bozeman, Montana."
   schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
 >
   <PageHero
     eyebrow="About the practice"
     title="Therapy built around the person in the room."
-    intro="Common Ground Therapy is Avery Morgan’s counseling practice in Richmond, Virginia, offering individual therapy for adults."
+    intro="Horizon Therapy is Morgan Hale’s counseling practice in Bozeman, Montana, offering individual therapy for adults."
     crumbs={crumbs}
   />
 
@@ -42,14 +43,22 @@ const crumbs = [{ label: 'About Common Ground Therapy' }];
         </p>
 
         <p>
-          You and Avery can decide together what deserves attention, what pace
+          You and Morgan can decide together what deserves attention, what pace
           feels manageable, and what kind of support may be useful.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="principles">
+  
+  <ScenicBand
+    image="/images/scenes/meadow-feature.jpg"
+    eyebrow="Rooted in Montana"
+    title="A little more room to see what matters."
+    position="center 55%"
+  />
+
+<section class="principles">
     <div class="container">
       <div class="section-heading">
         <p class="eyebrow">What you can expect</p>
@@ -63,7 +72,7 @@ const crumbs = [{ label: 'About Common Ground Therapy' }];
           <h3>Individual attention</h3>
 
           <p>
-            Common Ground Therapy provides one-to-one counseling for adults. The
+            Horizon Therapy provides one-to-one counseling for adults. The
             work stays focused on your experiences, concerns, and goals.
           </p>
         </article>
@@ -108,13 +117,13 @@ const crumbs = [{ label: 'About Common Ground Therapy' }];
       <div class="starting-panel">
         <p>
           The Services section describes some of the concerns people may bring
-          to counseling. The Approaches section explains several methods Avery
+          to counseling. The Approaches section explains several methods Morgan
           may use during the work.
         </p>
 
         <p>
-          Both are starting points. A conversation with Avery can help you
-          determine whether Common Ground Therapy fits what you are looking for.
+          Both are starting points. A conversation with Morgan can help you
+          determine whether Horizon Therapy fits what you are looking for.
         </p>
 
         <div class="starting-links">
@@ -132,35 +141,27 @@ const crumbs = [{ label: 'About Common Ground Therapy' }];
     </div>
   </section>
 
-  <section class="counselor-band">
-    <div class="container counselor-grid">
-      <div class="counselor-visual" aria-hidden="true">
-        <div class="visual-square"></div>
-        <div class="visual-circle"></div>
-
-        <div class="visual-person">
-          <span class="head"></span>
-          <span class="body"></span>
-        </div>
-      </div>
-
-      <div class="counselor-copy">
-        <p class="eyebrow">The counselor behind the practice</p>
-
-        <h2>Meet Avery Morgan, LPC.</h2>
-
-        <p>
-          Avery’s education, clinical training, professional credentials, and
-          therapeutic background are described in more detail on her profile.
-        </p>
-
-        <a class="profile-link" href="/about/avery-morgan/">
-          View Avery’s profile
-          <span>→</span>
-        </a>
-      </div>
+  
+<section class="hz-about-morgan">
+  <div class="container hz-about-morgan-grid">
+    <div>
+      <p class="eyebrow">The counselor behind the practice</p>
+      <h2>Meet Morgan Hale, LPC.</h2>
     </div>
-  </section>
+
+    <div>
+      <p>
+        Morgan’s education, clinical training, professional credentials, and
+        therapeutic background are described in more detail on her profile.
+      </p>
+
+      <a class="hz-text-link" href="/about/morgan-hale/">
+        View Morgan’s profile →
+      </a>
+    </div>
+  </div>
+</section>
+
 </Layout>
 
 <style>
