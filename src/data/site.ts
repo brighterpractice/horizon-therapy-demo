@@ -18,7 +18,7 @@ export const externalLinkAttrs = () => ({
 });
 
 export const site = {
- publicUrl: 'https://horizon-therapy-demo.example',
+ publicUrl: 'https://horizon.brightersites.app',
  practice,
  clinician: {
  name: 'Morgan Hale',

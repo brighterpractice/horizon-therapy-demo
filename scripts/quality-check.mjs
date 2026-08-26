@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
-const canonicalOrigin = 'https://horizon-therapy-demo.example';
+const canonicalOrigin = 'https://horizon.brightersites.app';
 
 const failures = [];
 const warnings = [];

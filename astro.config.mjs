@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://horizon-therapy-demo.example',
+  site: 'https://horizon.brightersites.app',
   output: 'static',
   trailingSlash: 'always',
 });
