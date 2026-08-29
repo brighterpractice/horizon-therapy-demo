@@ -1,172 +1,245 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import ScenicBand from '../../components/ScenicBand.astro';
 import { services } from '../../data/services';
 import { breadcrumbSchema, pageSchema } from '../../lib/schema';
 
 const crumbs = [{ label: 'Services' }];
-
-const publishedServices = services.filter(
- (service) =>
- service.published &&
- service.published
-);
+const publishedServices = services.filter((service) => service.published);
 ---
 
 <Layout
- title="Therapy Services in Bozeman, Montana"
- description="Explore counseling for trauma, anxiety, grief, depression, chronic pain and illness, life transitions, relationships, and personal growth in Bozeman, Montana."
- schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
+  title="Therapy Services in Bozeman, Montana"
+  description="Explore individual counseling for trauma, anxiety, grief, depression, chronic illness, life transitions, relationships, and personal growth in Bozeman, Montana."
+  schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
 >
- <PageHero
- eyebrow="Individual counseling for adults"
- title="Support for what may be bringing you to therapy."
- intro="The concerns that lead someone to counseling do not always fit neatly into one category. These pages describe several common areas Morgan works with."
- crumbs={crumbs}
- />
+  <PageHero
+    eyebrow="What you may be navigating"
+    title="Different terrain can call for different kinds of support."
+    intro="Horizon offers individual counseling for adults across a range of concerns. The pages below are landmarks, not boxes you have to fit into."
+    crumbs={crumbs}
+  />
 
- <section class="section">
- <div class="container grid grid--2">
- <div>
- <p class="eyebrow">Individual therapy</p>
- <h2>Begin with the concern, question, or change that matters to you.</h2>
- </div>
+  <section class="services-intro">
+    <div class="container intro-grid">
+      <div>
+        <p class="eyebrow">Finding an entry point</p>
+        <h2>Start with the part of the landscape you can see most clearly.</h2>
+      </div>
+      <div>
+        <p>
+          Sometimes one concern is obvious. Other times stress, relationships,
+          grief, health, and uncertainty overlap until it is difficult to know
+          which part came first.
+        </p>
+        <p>
+          You do not need to solve that before therapy begins. These service
+          pages simply offer a closer look at some of the experiences Morgan’s
+          fictional practice is designed to support.
+        </p>
+      </div>
+    </div>
+  </section>
 
- <div>
- <p>
- Some people seek counseling because of a specific experience or
- symptom. Others notice patterns in emotions, relationships, stress,
- or daily life that they want to understand more clearly.
- </p>
+  <ScenicBand
+    image="/images/scenes/river-forest.jpg"
+    eyebrow="A wider view"
+    title="The right starting point is the one that helps you orient."
+    position="center"
+  />
 
- <p>
- The service pages below describe common reasons adults may seek
- support. They are not meant to require you to choose a diagnosis or
- place yourself into one category.
- </p>
+  <section class="service-index" id="areas-of-support">
+    <div class="container">
+      <div class="index-heading">
+        <p class="eyebrow">Areas of support</p>
+        <h2>Choose a trailhead.</h2>
+      </div>
 
- <a class="link-arrow" href="/services/individual-therapy/">
- Learn more about individual therapy
- </a>
- </div>
- </div>
- </section>
+      <div class="service-list">
+        {
+          publishedServices.map((service, index) => (
+            <a
+              href={service.href}
+              data-track={`service-${service.slug}`}
+              aria-label={`Learn more about ${service.title}`}
+            >
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+              <b aria-hidden="true">→</b>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
- <section class="section section--tint" id="areas-of-support">
- <div class="container">
- <p class="eyebrow">Areas of support</p>
- <h2>Explore what may be bringing you to counseling.</h2>
+  <section class="services-bridge">
+    <div class="container bridge-grid">
+      <div>
+        <p class="eyebrow">Concern and method</p>
+        <h2>The reason you come in and the way therapy works are two different questions.</h2>
+      </div>
+      <div>
+        <p>
+          A service page describes the terrain: anxiety, grief, trauma,
+          relationship patterns, life changes, or another concern. An approach
+          page describes one possible way of working with that terrain.
+        </p>
+        <p>
+          More than one approach can be useful, and the route can change as the
+          work becomes clearer.
+        </p>
+        <a href="/approaches/">Explore therapy approaches →</a>
+      </div>
+    </div>
+  </section>
 
- <div class="areas">
- {
- publishedServices.map((service) => (
- <a
- class="service-card service-link card"
- href={service.href}
- aria-label={`Learn more about ${service.title}`}
- data-track={`service-${service.slug}`}
- >
- <h3>{service.title}</h3>
- <p>{service.description}</p>
- </a>
- ))
- }
- </div>
- </div>
- </section>
-
- <section class="section">
- <div class="container grid grid--2">
- <div>
- <p class="eyebrow">Services and approaches</p>
- <h2>What brings you in and how therapy works are not the same thing.</h2>
- </div>
-
- <div>
- <p>
- Services describe concerns such as trauma, anxiety, grief, chronic
- pain or illness, relationship difficulties, or life transitions.
- Approaches describe
- methods Morgan may use during counseling, such as, IFS, somatic
- work, EFT, or mindfulness.
- </p>
-
- <p>
- A single concern may be explored in more than one way, and the
- approach can change as counseling develops.
- </p>
-
- <a class="link-arrow" href="/approaches/">
- Explore therapy approaches
- </a>
- </div>
- </div>
- </section>
-
- <section class="section section--tint">
- <div class="container measure">
- <p class="eyebrow">Finding a place to begin</p>
- <h2>You can start without having the right label.</h2>
-
- <p>
- Experiences often overlap. If several pages sound familiar—or none of
- them describe your situation exactly—that does not prevent you from
- reaching out.
- </p>
-
- <a class="link-arrow" href="/contact/">
- Contact and getting started
- </a>
- </div>
- </section>
+  <section class="services-final">
+    <div class="container final-grid">
+      <p class="eyebrow">Still not sure where to begin?</p>
+      <h2>You can start with the uncertainty itself.</h2>
+      <a href="/contact/">Contact Horizon →</a>
+    </div>
+  </section>
 </Layout>
 
 <style>
- .areas{
- display:grid;
- gap:.75rem;
- margin-top:2rem
- }
+  .services-intro,
+  .service-index,
+  .services-bridge,
+  .services-final {
+    padding:clamp(4.5rem,8vw,7rem) 0;
+  }
 
- .service-card{
- display:block;
- padding:1.2rem;
- color:var(--body);
- text-decoration:none;
- transition:
- transform .18s ease,
- box-shadow .18s ease,
- border-color .18s ease
- }
+  .intro-grid,
+  .bridge-grid {
+    display:grid;
+    gap:2.5rem;
+  }
 
- .service-card h3{
- font-family:var(--sans);
- font-size:1rem;
- font-weight:700
- }
+  .services-intro h2,
+  .index-heading h2,
+  .services-bridge h2,
+  .services-final h2 {
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:500;
+    letter-spacing:-.04em;
+  }
 
- .service-card p{
- font-size:.95rem
- }
+  .services-intro h2 {
+    max-width:14ch;
+    font-size:clamp(2.5rem,4.8vw,4.6rem);
+    line-height:.98;
+  }
 
- @media(hover:hover){
- a.service-card:hover{
- border-color:var(--sage);
- color:var(--body);
- box-shadow:var(--shadow);
- transform:translateY(-2px)
- }
- }
+  .service-index {
+    background:#eef0e9;
+  }
 
- @media(min-width:36rem){
- .areas{
- grid-template-columns:repeat(2,1fr)
- }
- }
+  .index-heading {
+    margin-bottom:2.5rem;
+  }
 
- @media(min-width:64rem){
- .areas{
- grid-template-columns:repeat(3,1fr)
- }
- }
+  .index-heading h2 {
+    font-size:clamp(2.8rem,5vw,4.8rem);
+  }
+
+  .service-list {
+    border-top:1px solid #aebbb6;
+  }
+
+  .service-list a {
+    display:grid;
+    grid-template-columns:3rem 1fr auto;
+    gap:1rem;
+    align-items:start;
+    padding:1.4rem 0;
+    border-bottom:1px solid #aebbb6;
+    color:#173b3d;
+    text-decoration:none;
+  }
+
+  .service-list span {
+    color:#a77838;
+    font-size:.72rem;
+    font-weight:850;
+    letter-spacing:.08em;
+  }
+
+  .service-list h3 {
+    margin:0 0 .35rem;
+    color:#173b3d;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(1.5rem,2.5vw,2.25rem);
+    font-weight:500;
+  }
+
+  .service-list p {
+    max-width:46rem;
+    margin:0;
+    color:#5f706b;
+  }
+
+  .service-list b {
+    color:#a77838;
+    font-size:1.2rem;
+  }
+
+  .service-list a:hover {
+    color:#173b3d;
+    background:rgba(255,255,255,.38);
+  }
+
+  .services-bridge {
+    background:#173b3d;
+    color:#e5ece8;
+  }
+
+  .services-bridge h2,
+  .services-bridge .eyebrow {
+    color:white;
+  }
+
+  .services-bridge a,
+  .services-final a {
+    color:#d4a75d;
+    font-weight:800;
+  }
+
+  .services-final {
+    background:#f6f1e7;
+  }
+
+  .final-grid {
+    max-width:50rem;
+  }
+
+  .services-final h2 {
+    font-size:clamp(2.6rem,5vw,4.5rem);
+  }
+
+  @media(min-width:48rem) {
+    .intro-grid,
+    .bridge-grid {
+      grid-template-columns:1fr 1fr;
+      gap:clamp(3rem,7vw,7rem);
+      align-items:start;
+    }
+
+    .service-list a {
+      grid-template-columns:4rem minmax(16rem,.75fr) minmax(20rem,1.25fr) auto;
+      gap:1.5rem;
+      align-items:center;
+    }
+
+    .service-list a > div {
+      display:contents;
+    }
+
+    .service-list h3 { margin:0; }
+  }
 </style>
