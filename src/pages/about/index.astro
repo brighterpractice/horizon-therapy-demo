@@ -21,8 +21,8 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
 
   <section class="horizon-intro">
     <div class="container intro-grid">
-      <p class="section-number">01 / PERSPECTIVE</p>
       <div>
+        <p class="eyebrow">Perspective</p>
         <h2>Sometimes the problem looks different when you can see more of the landscape around it.</h2>
       </div>
       <div class="intro-copy">
@@ -56,7 +56,6 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
 
       <div class="principle-grid">
         <article>
-          <span>01</span>
           <h3>Start with the terrain you are actually in.</h3>
           <p>
             Therapy can begin with present circumstances, not an idealized
@@ -66,7 +65,6 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
         </article>
 
         <article>
-          <span>02</span>
           <h3>Use perspective before pressure.</h3>
           <p>
             Understanding a pattern, transition, or relationship can create
@@ -75,7 +73,6 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
         </article>
 
         <article>
-          <span>03</span>
           <h3>Keep direction connected to what matters.</h3>
           <p>
             Goals are most useful when they reflect your values, relationships,
@@ -139,14 +136,6 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
     gap:2rem;
   }
 
-  .section-number {
-    margin:0;
-    color:#b4823c;
-    font-size:.72rem;
-    font-weight:850;
-    letter-spacing:.12em;
-  }
-
   .horizon-intro h2,
   .horizon-principles h2,
   .horizon-entry h2,
@@ -186,14 +175,8 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
     border-top:1px solid #b8c1b5;
   }
 
-  .principle-grid span {
-    color:#a77738;
-    font-size:.72rem;
-    font-weight:850;
-  }
-
   .principle-grid h3 {
-    margin-top:1.2rem;
+    margin-top:.25rem;
     font-family:Georgia,"Times New Roman",serif;
     font-weight:500;
   }
@@ -240,22 +223,17 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
   }
 
   @media(min-width:48rem) {
-    .intro-grid {
-      grid-template-columns:.18fr 1.05fr .77fr;
-      gap:clamp(2rem,5vw,5rem);
+    .intro-grid,
+    .entry-grid,
+    .morgan-grid {
+      grid-template-columns:1fr 1fr;
+      gap:clamp(3rem,7vw,7rem);
       align-items:start;
     }
 
     .principle-grid {
       grid-template-columns:repeat(3,1fr);
       gap:2rem;
-    }
-
-    .entry-grid,
-    .morgan-grid {
-      grid-template-columns:1fr 1fr;
-      gap:clamp(3rem,7vw,7rem);
-      align-items:start;
     }
   }
 </style>
