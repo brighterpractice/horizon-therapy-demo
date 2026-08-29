@@ -93,30 +93,11 @@ const path = Astro.url.pathname;
 
     <div class="hz-menu-content">
       <nav class="menu-primary" aria-label="Main navigation">
-        <a href="/" class:list={{ active: path === '/' }}>
-          <span>01</span>
-          Home
-        </a>
-
-        <a href="/about/" class:list={{ active: path.startsWith('/about') }}>
-          <span>02</span>
-          About
-        </a>
-
-        <a href="/services/" class:list={{ active: path.startsWith('/services') }}>
-          <span>03</span>
-          Services
-        </a>
-
-        <a href="/approaches/" class:list={{ active: path.startsWith('/approaches') }}>
-          <span>04</span>
-          Approaches
-        </a>
-
-        <a href="/contact/" class:list={{ active: path.startsWith('/contact') }}>
-          <span>05</span>
-          Contact
-        </a>
+        <a href="/" class:list={{ active: path === '/' }}>Home</a>
+        <a href="/about/" class:list={{ active: path.startsWith('/about') }}>About</a>
+        <a href="/services/" class:list={{ active: path.startsWith('/services') }}>Services</a>
+        <a href="/approaches/" class:list={{ active: path.startsWith('/approaches') }}>Approaches</a>
+        <a href="/contact/" class:list={{ active: path.startsWith('/contact') }}>Contact</a>
       </nav>
 
       <aside class="menu-secondary">
@@ -309,8 +290,6 @@ const path = Astro.url.pathname;
     display: none;
   }
 
-  /* Full viewport overlay lives OUTSIDE the filtered header. */
-
   .hz-menu[hidden] {
     display: none !important;
   }
@@ -333,13 +312,8 @@ const path = Astro.url.pathname;
     position: fixed;
     inset: 0;
     background:
-      linear-gradient(
-        90deg,
-        rgba(7,40,39,.97),
-        rgba(7,40,39,.82)
-      ),
-      url('/images/scenes/forest-feature.jpg')
-      center / cover no-repeat;
+      linear-gradient(90deg, rgba(7,40,39,.97), rgba(7,40,39,.82)),
+      url('/images/scenes/forest-feature.jpg') center / cover no-repeat;
   }
 
   .hz-menu-inner {
@@ -394,9 +368,7 @@ const path = Astro.url.pathname;
   }
 
   .menu-primary a {
-    display: grid;
-    grid-template-columns: 2.5rem 1fr;
-    gap: 1rem;
+    display: block;
     padding: .35rem 0;
     color: #edf3ef;
     font-family: Georgia, "Times New Roman", serif;
@@ -404,14 +376,6 @@ const path = Astro.url.pathname;
     font-weight: 500;
     line-height: .98;
     text-decoration: none;
-  }
-
-  .menu-primary a span {
-    padding-top: .65rem;
-    color: #91aaa4;
-    font-family: system-ui, sans-serif;
-    font-size: .7rem;
-    font-weight: 900;
   }
 
   .menu-primary a:hover,
@@ -514,7 +478,6 @@ const path = Astro.url.pathname;
     }
 
     .menu-primary a {
-      grid-template-columns: 2rem 1fr;
       font-size: clamp(2.6rem,13vw,4.5rem);
     }
   }
