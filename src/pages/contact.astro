@@ -1,9 +1,202 @@
 ---
-import Layout from '../layouts/Layout.astro'; import PageHero from '../components/PageHero.astro';
-import ScenicBand from '../components/ScenicBand.astro'; import Button from '../components/Button.astro'; import {appointmentUrl,clientPortalUrl,externalLinkAttrs} from '../data/site'; import {breadcrumbSchema,pageSchema} from '../lib/schema';
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import ScenicBand from '../components/ScenicBand.astro';
+import Button from '../components/Button.astro';
+import {
+  appointmentUrl,
+  clientPortalUrl,
+  externalLinkAttrs,
+} from '../data/site';
+import { breadcrumbSchema, pageSchema } from '../lib/schema';
+
 const portalAttrs = externalLinkAttrs();
-const crumbs = [{label:'Contact'}];
+const crumbs = [{ label: 'Contact' }];
 ---
-<Layout title="Contact Horizon Therapy | Bozeman, Montana" description="Request an individual counseling appointment with Morgan Hale, LPC, at Horizon Therapy in Bozeman, Montana." schema={pageSchema([breadcrumbSchema(crumbs,Astro.url.pathname)])}><PageHero eyebrow="Contact and getting started" title="Take the first step when you are ready." intro="If you are interested in individual counseling with Morgan Hale, LPC, use the Request Appointment option to begin." crumbs={crumbs}/><section class="section" id="new-clients"><div class="container contact-grid"><div><p class="eyebrow">New clients</p><h2>Begin with an appointment request.</h2><p>Use the Request Appointment option to get started. Information needed for counseling will be collected through the appropriate secure system.</p><p>Please do not send diagnoses, medication information, trauma history, insurance identifiers, or other sensitive clinical details through ordinary contact methods.</p><p class="safety-note">Do not use this website or an appointment request for emergencies or urgent support. If there is immediate danger, contact local emergency services.</p><Button href={appointmentUrl} tracking="request-appointment">Request an appointment</Button></div><aside class="card" id="contact-details"><h2>Horizon Therapy</h2><dl><div><dt>Location</dt><dd>Bozeman, Montana</dd></div><div><dt>Existing clients</dt><dd><a href={clientPortalUrl} target={portalAttrs.target} rel={portalAttrs.rel} data-track="client-portal">Open Client Portal</a></dd></div></dl></aside></div></section><section class="section" id="faq"><div class="container measure"><p class="eyebrow">Questions before getting started</p><h2>A few helpful details</h2><details><summary>Where is Horizon Therapy located?</summary><p>Horizon Therapy is based in Bozeman, Montana.</p></details><details><summary>What kind of counseling is available?</summary><p>Morgan provides individual therapy for adults. The <a href="/services/">services overview</a> describes current areas of support.</p></details><details><summary>Where can I learn more about Morgan?</summary><p>Read about <a href="/about/morgan-hale/">Morgan’s background and approach to counseling</a>.</p></details></div></section>
+
+<Layout
+  title="Contact Horizon Therapy | Bozeman, Montana"
+  description="Request an individual counseling appointment with Morgan Hale, LPC, at Horizon Therapy in Bozeman, Montana."
+  schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
+>
+  <PageHero
+    eyebrow="Contact Horizon"
+    title="When you are ready, choose a place to begin."
+    intro="An appointment request can start with the practical details. You do not need to map the entire problem before making contact."
+    crumbs={crumbs}
+  />
+
+  <section class="contact-start">
+    <div class="container start-grid">
+      <div>
+        <p class="eyebrow">New clients</p>
+        <h2>Begin with the next visible step.</h2>
+      </div>
+      <div>
+        <p>
+          Use the appointment request to establish contact and ask about
+          availability. More detailed intake information can be handled through
+          the appropriate secure system once the next step is clear.
+        </p>
+        <p>
+          Keep sensitive clinical and insurance information out of ordinary
+          website or email messages.
+        </p>
+        <Button href={appointmentUrl} tracking="request-appointment">
+          Request an appointment
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <ScenicBand
+    image="/images/scenes/home-hero.jpg"
+    eyebrow="A simple beginning"
+    title="You only need enough direction for the next step."
+    position="center"
+  />
+
+  <section class="contact-path">
+    <div class="container">
+      <p class="eyebrow">What happens next</p>
+      <div class="path-grid">
+        <article>
+          <h2>Reach out</h2>
+          <p>Send the appointment request with basic scheduling information.</p>
+        </article>
+        <article>
+          <h2>Get oriented</h2>
+          <p>Review availability, practical details, and whether Horizon may fit what you are looking for.</p>
+        </article>
+        <article>
+          <h2>Continue securely</h2>
+          <p>Use the designated client system for intake and private information.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="practice-reference">
+    <div class="container reference-grid">
+      <div>
+        <p class="eyebrow">Practice reference</p>
+        <h2>Horizon Therapy</h2>
+        <p>Bozeman, Montana · Individual counseling for adults</p>
+      </div>
+      <div class="reference-links">
+        <a href="/services/">Explore what you may be navigating →</a>
+        <a href="/about/morgan-hale/">Meet Morgan →</a>
+        <a
+          href={clientPortalUrl}
+          target={portalAttrs.target}
+          rel={portalAttrs.rel}
+          data-track="client-portal"
+        >
+          Existing clients: open Client Portal ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="urgent-note">
+    <div class="container">
+      <p>
+        Horizon’s website and appointment-request flow are not intended for urgent or emergency needs. Use appropriate local emergency or crisis resources when immediate help is required.
+      </p>
+    </div>
+  </section>
 </Layout>
-<style>.contact-grid{display:grid;gap:2rem}.contact-grid dl{margin:0}.contact-grid dl div{padding:1rem 0;border-top:1px solid var(--sand)}.safety-note{padding-left:1rem;border-left:3px solid var(--clay);font-size:.92rem}dt{color:var(--muted);font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}dd{margin:.2rem 0 0;color:var(--ink)}details{padding:1.25rem 0;border-top:1px solid var(--sand)}summary{cursor:pointer;color:var(--ink);font-weight:750}details p{padding-top:1rem}@media(min-width:48rem){.contact-grid{grid-template-columns:1.2fr .8fr;align-items:start}}</style>
+
+<style>
+  .contact-start,
+  .contact-path,
+  .practice-reference {
+    padding:clamp(4.5rem,8vw,7rem) 0;
+  }
+
+  .start-grid,
+  .reference-grid {
+    display:grid;
+    gap:2.5rem;
+  }
+
+  .contact-start h2,
+  .contact-path h2,
+  .practice-reference h2 {
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:500;
+    letter-spacing:-.04em;
+  }
+
+  .contact-start h2 {
+    max-width:12ch;
+    font-size:clamp(2.8rem,5vw,4.8rem);
+    line-height:.98;
+  }
+
+  .contact-start .button { margin-top:1rem; }
+
+  .contact-path { background:#eef0e9; }
+
+  .path-grid {
+    display:grid;
+    gap:1.25rem;
+    margin-top:2.5rem;
+  }
+
+  .path-grid article {
+    min-height:13rem;
+    padding:1.5rem;
+    border-top:3px solid #a77838;
+    background:rgba(255,255,255,.5);
+  }
+
+  .path-grid h2 {
+    margin-top:.25rem;
+    font-size:clamp(1.8rem,3vw,2.7rem);
+  }
+
+  .practice-reference { background:#f6f1e7; }
+
+  .practice-reference h2 {
+    font-size:clamp(2.7rem,4.8vw,4.5rem);
+  }
+
+  .reference-links {
+    display:grid;
+    gap:.75rem;
+  }
+
+  .reference-links a {
+    padding:1rem 0;
+    border-top:1px solid #c9c0af;
+    color:#315a5a;
+    font-weight:800;
+    text-decoration:none;
+  }
+
+  .urgent-note {
+    padding:1.5rem 0;
+    background:#173b3d;
+    color:#e5ece8;
+  }
+
+  .urgent-note p {
+    max-width:54rem;
+    margin:0;
+    font-size:.9rem;
+  }
+
+  @media(min-width:48rem) {
+    .start-grid,
+    .reference-grid {
+      grid-template-columns:1fr 1fr;
+      gap:clamp(3rem,7vw,7rem);
+      align-items:start;
+    }
+
+    .path-grid {
+      grid-template-columns:repeat(3,1fr);
+    }
+  }
+</style>

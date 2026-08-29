@@ -9,382 +9,231 @@ const crumbs = [{ label: 'About Horizon Therapy' }];
 
 <Layout
   title="About Horizon Therapy | Bozeman, Montana"
-  description="Learn about Horizon Therapy, a private counseling practice for adults in Bozeman, Montana."
+  description="Learn about Horizon Therapy, a fictional individual counseling practice for adults in Bozeman, Montana."
   schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
 >
   <PageHero
-    eyebrow="About the practice"
-    title="Therapy built around the person in the room."
-    intro="Horizon Therapy is Morgan Hale’s counseling practice in Bozeman, Montana, offering individual therapy for adults."
+    eyebrow="About Horizon"
+    title="A little more room to see where you are—and where you want to go."
+    intro="Horizon Therapy is Morgan Hale’s fictional counseling practice in Bozeman, Montana, built around individual therapy for adults navigating change, uncertainty, and difficult seasons."
     crumbs={crumbs}
   />
 
-  <section class="about-intro">
-    <div class="container about-intro-grid">
-      <div class="about-number">
-        <span>01</span>
-        <div></div>
-      </div>
-
+  <section class="horizon-intro">
+    <div class="container intro-grid">
       <div>
-        <p class="eyebrow">The idea behind Align</p>
-
-        <h2>
-          You do not need to fit yourself into a predetermined version of
-          therapy.
-        </h2>
+        <p class="eyebrow">Perspective</p>
+        <h2>Sometimes the problem looks different when you can see more of the landscape around it.</h2>
       </div>
-
       <div class="intro-copy">
         <p>
-          Therapy begins with understanding what has been happening in your
-          life and what you would like to be different. Some concerns are
-          specific and easy to name. Others become clearer over time.
+          Horizon is designed around the idea that therapy can create distance
+          from the immediate noise without disconnecting from real life. A wider
+          view can make patterns, choices, losses, and priorities easier to see.
         </p>
-
         <p>
-          You and Morgan can decide together what deserves attention, what pace
-          feels manageable, and what kind of support may be useful.
+          That does not mean every problem has a simple answer. It means there
+          can be value in knowing the terrain before deciding which direction
+          makes sense next.
         </p>
       </div>
     </div>
   </section>
 
-  
   <ScenicBand
     image="/images/scenes/meadow-feature.jpg"
     eyebrow="Rooted in Montana"
-    title="A little more room to see what matters."
+    title="Space can change what comes into focus."
     position="center 55%"
   />
 
-<section class="principles">
+  <section class="horizon-principles">
     <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">What you can expect</p>
-        <h2>Three ideas that shape the work.</h2>
+      <div class="principle-heading">
+        <p class="eyebrow">What shapes the practice</p>
+        <h2>Three ways Horizon thinks about the work.</h2>
       </div>
 
-      <div class="principle-list">
+      <div class="principle-grid">
         <article>
-          <span>01</span>
-
-          <h3>Individual attention</h3>
-
+          <h3>Start with the terrain you are actually in.</h3>
           <p>
-            Horizon Therapy provides one-to-one counseling for adults. The
-            work stays focused on your experiences, concerns, and goals.
+            Therapy can begin with present circumstances, not an idealized
+            version of how life is supposed to look or how quickly you should
+            be moving through it.
           </p>
         </article>
 
         <article>
-          <span>02</span>
-
-          <h3>Collaboration</h3>
-
+          <h3>Use perspective before pressure.</h3>
           <p>
-            Therapy is something you participate in rather than something done
-            to you. Questions, preferences, uncertainty, and feedback are
-            welcome.
+            Understanding a pattern, transition, or relationship can create
+            better choices than simply demanding that you react differently.
           </p>
         </article>
 
         <article>
-          <span>03</span>
-
-          <h3>Room for context</h3>
-
+          <h3>Keep direction connected to what matters.</h3>
           <p>
-            Relationships, values, culture, beliefs, responsibilities, and life
-            circumstances can all matter without requiring you to fit a
-            particular mold.
+            Goals are most useful when they reflect your values, relationships,
+            responsibilities, and the life you actually want to inhabit.
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="starting-point">
-    <div class="container starting-grid">
-      <div class="starting-title">
-        <p class="eyebrow">Choosing where to begin</p>
-
-        <h2>
-          You do not need to know exactly what kind of therapy you need.
-        </h2>
+  <section class="horizon-entry">
+    <div class="container entry-grid">
+      <div>
+        <p class="eyebrow">Different ways in</p>
+        <h2>You can begin with the concern or with curiosity about the process.</h2>
       </div>
 
-      <div class="starting-panel">
-        <p>
-          The Services section describes some of the concerns people may bring
-          to counseling. The Approaches section explains several methods Morgan
-          may use during the work.
-        </p>
-
-        <p>
-          Both are starting points. A conversation with Morgan can help you
-          determine whether Horizon Therapy fits what you are looking for.
-        </p>
-
-        <div class="starting-links">
-          <a href="/services/">
-            <span>Services</span>
-            <strong>Explore areas of support ↗</strong>
-          </a>
-
-          <a href="/approaches/">
-            <span>Approaches</span>
-            <strong>See how therapy may work ↗</strong>
-          </a>
-        </div>
+      <div class="entry-links">
+        <a href="/services/">
+          <span>Services</span>
+          <strong>What are you navigating? →</strong>
+        </a>
+        <a href="/approaches/">
+          <span>Approaches</span>
+          <strong>How might the work take shape? →</strong>
+        </a>
       </div>
     </div>
   </section>
 
-  
-<section class="hz-about-morgan">
-  <div class="container hz-about-morgan-grid">
-    <div>
-      <p class="eyebrow">The counselor behind the practice</p>
-      <h2>Meet Morgan Hale, LPC.</h2>
+  <section class="horizon-morgan">
+    <div class="container morgan-grid">
+      <div>
+        <p class="eyebrow">Meet the counselor</p>
+        <h2>Morgan Hale, LPC</h2>
+      </div>
+      <div>
+        <p>
+          Morgan’s fictional profile shows how Horizon’s reflective,
+          place-oriented identity carries into the clinician story and the
+          practical details of individual counseling.
+        </p>
+        <a href="/about/morgan-hale/">Meet Morgan →</a>
+      </div>
     </div>
-
-    <div>
-      <p>
-        Morgan’s education, clinical training, professional credentials, and
-        therapeutic background are described in more detail on her profile.
-      </p>
-
-      <a class="hz-text-link" href="/about/morgan-hale/">
-        View Morgan’s profile →
-      </a>
-    </div>
-  </div>
-</section>
-
+  </section>
 </Layout>
 
 <style>
-  .about-intro,
-  .principles,
-  .starting-point,
-  .counselor-band {
-    padding: clamp(4.5rem, 8vw, 7rem) 0;
+  .horizon-intro,
+  .horizon-principles,
+  .horizon-entry,
+  .horizon-morgan {
+    padding: clamp(4.5rem,8vw,7rem) 0;
   }
 
-  .about-intro-grid {
-    display: grid;
-    gap: 2rem;
+  .intro-grid,
+  .entry-grid,
+  .morgan-grid {
+    display:grid;
+    gap:2rem;
   }
 
-  .about-number {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    color: #d36b4c;
-    font-size: .75rem;
-    font-weight: 800;
+  .horizon-intro h2,
+  .horizon-principles h2,
+  .horizon-entry h2,
+  .horizon-morgan h2 {
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:500;
+    letter-spacing:-.04em;
   }
 
-  .about-number div {
-    width: 3rem;
-    height: 1px;
-    background: #e6ae8f;
-  }
-
-  .about-intro h2 {
-    max-width: 17ch;
+  .horizon-intro h2 {
+    max-width:15ch;
+    font-size:clamp(2.5rem,5vw,4.8rem);
+    line-height:.98;
   }
 
   .intro-copy {
-    max-width: 42rem;
+    max-width:38rem;
+    align-self:end;
   }
 
-  .intro-copy p + p {
-    margin-top: 1rem;
+  .horizon-principles {
+    background:#edf0e8;
   }
 
-  .principles {
-    background: #f8efe6;
+  .principle-heading {
+    max-width:48rem;
+    margin-bottom:2.5rem;
   }
 
-  .section-heading {
-    max-width: 42rem;
-    margin-bottom: 2.5rem;
+  .principle-grid {
+    display:grid;
+    gap:1rem;
   }
 
-  .principle-list {
-    border-top: 1px solid #e6d1c5;
+  .principle-grid article {
+    padding:1.6rem 0;
+    border-top:1px solid #b8c1b5;
   }
 
-  .principle-list article {
-    display: grid;
-    gap: .8rem;
-    padding: 1.8rem 0;
-    border-bottom: 1px solid #e6d1c5;
+  .principle-grid h3 {
+    margin-top:.25rem;
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:500;
   }
 
-  .principle-list article > span {
-    color: #d36b4c;
-    font-size: .72rem;
-    font-weight: 800;
+  .horizon-entry {
+    background:#183d3f;
+    color:#e8efeb;
   }
 
-  .principle-list h3,
-  .principle-list p {
-    margin: 0;
+  .horizon-entry h2,
+  .horizon-entry .eyebrow {
+    color:white;
   }
 
-  .principle-list p {
-    max-width: 42rem;
+  .entry-links {
+    display:grid;
+    gap:.75rem;
   }
 
-  .starting-grid {
-    display: grid;
-    gap: 2.5rem;
+  .entry-links a {
+    display:grid;
+    gap:.25rem;
+    padding:1.25rem 0;
+    border-top:1px solid rgba(255,255,255,.22);
+    color:white;
+    text-decoration:none;
   }
 
-  .starting-title h2 {
-    max-width: 16ch;
+  .entry-links span {
+    color:#d6ad62;
+    font-size:.72rem;
+    font-weight:850;
+    letter-spacing:.1em;
+    text-transform:uppercase;
   }
 
-  .starting-panel {
-    padding: clamp(1.5rem, 4vw, 2.5rem);
-    border-left: 4px solid #c9795c;
-    background: #fffaf4;
+  .horizon-morgan {
+    background:#f6f1e7;
   }
 
-  .starting-panel > p + p {
-    margin-top: 1rem;
+  .horizon-morgan a {
+    color:#315a5a;
+    font-weight:800;
   }
 
-  .starting-links {
-    display: grid;
-    gap: .75rem;
-    margin-top: 2rem;
-  }
-
-  .starting-links a {
-    display: grid;
-    gap: .2rem;
-    padding: 1rem 0;
-    border-top: 1px solid #ead6ca;
-    color: #7a4d67;
-    text-decoration: none;
-  }
-
-  .starting-links a span {
-    color: #81746f;
-    font-size: .72rem;
-    font-weight: 800;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-
-  .counselor-band {
-    overflow: hidden;
-    background: #7a4d67;
-    color: #f7eee8;
-  }
-
-  .counselor-grid {
-    display: grid;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .counselor-band h2 {
-    color: white;
-  }
-
-  .counselor-band .eyebrow {
-    color: #ead1bd;
-  }
-
-  .counselor-visual {
-    position: relative;
-    min-height: 22rem;
-  }
-
-  .visual-square {
-    position: absolute;
-    width: 15rem;
-    height: 15rem;
-    left: 1rem;
-    top: 1rem;
-    border-radius: 1.3rem;
-    background: #9a5e63;
-    transform: rotate(-7deg);
-  }
-
-  .visual-circle {
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-    right: 1rem;
-    bottom: 1rem;
-    border: 1px solid rgba(255,255,255,.25);
-    border-radius: 50%;
-  }
-
-  .visual-person {
-    position: absolute;
-    width: 9rem;
-    height: 11rem;
-    left: 7rem;
-    top: 6rem;
-  }
-
-  .head {
-    position: absolute;
-    width: 3.3rem;
-    height: 3.3rem;
-    left: 2.85rem;
-    border-radius: 50%;
-    background: #dbe6f0;
-  }
-
-  .body {
-    position: absolute;
-    width: 8rem;
-    height: 7rem;
-    left: .5rem;
-    bottom: 0;
-    border-radius: 4rem 4rem .8rem .8rem;
-    background: #e6ae8f;
-  }
-
-  .profile-link {
-    display: inline-flex;
-    gap: .7rem;
-    align-items: center;
-    margin-top: 1.5rem;
-    color: white;
-    font-weight: 750;
-    text-decoration: none;
-  }
-
-  @media (min-width:48rem) {
-    .about-intro-grid {
-      grid-template-columns: .22fr .78fr 1fr;
-      gap: clamp(2rem,5vw,5rem);
-      align-items: start;
+  @media(min-width:48rem) {
+    .intro-grid,
+    .entry-grid,
+    .morgan-grid {
+      grid-template-columns:1fr 1fr;
+      gap:clamp(3rem,7vw,7rem);
+      align-items:start;
     }
 
-    .principle-list article {
-      grid-template-columns: .2fr .7fr 1.3fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .starting-grid {
-      grid-template-columns: .9fr 1.1fr;
-      gap: clamp(3rem,7vw,7rem);
-    }
-
-    .counselor-grid {
-      grid-template-columns: .9fr 1.1fr;
-      gap: clamp(4rem,8vw,8rem);
+    .principle-grid {
+      grid-template-columns:repeat(3,1fr);
+      gap:2rem;
     }
   }
 </style>

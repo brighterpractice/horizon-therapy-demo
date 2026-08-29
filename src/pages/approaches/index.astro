@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import ScenicBand from '../../components/ScenicBand.astro';
 import { approaches } from '../../data/approaches';
 import { breadcrumbSchema, pageSchema } from '../../lib/schema';
 
@@ -8,135 +9,213 @@ const crumbs = [{ label: 'Approaches' }];
 ---
 
 <Layout
- title="Therapy Approaches in Bozeman, Montana"
- description="Explore therapy approaches Morgan Hale may use in individual counseling, including, IFS, Somatic Experiencing, EFT, and mindfulness."
- schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
+  title="Therapy Approaches in Bozeman, Montana"
+  description="Explore therapy approaches Morgan Hale may use in individual counseling in Bozeman, Montana."
+  schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
 >
- <PageHero
- eyebrow="How therapy may take shape"
- title="Therapy approaches Morgan may draw from."
- intro="Different approaches offer different ways to understand experiences, emotions, patterns, and responses. Morgan may use one or more depending on the focus of counseling."
- crumbs={crumbs}
- />
+  <PageHero
+    eyebrow="Ways the work may unfold"
+    title="Different paths can help you see the same terrain differently."
+    intro="Horizon presents several therapy approaches as possible routes through the work—not as programs you have to choose before you begin."
+    crumbs={crumbs}
+  />
 
- <section class="section">
- <div class="container grid grid--2">
- <div>
- <p class="eyebrow">Understanding the difference</p>
- <h2>Services describe what may bring you in. Approaches describe ways of working.</h2>
- </div>
+  <section class="approach-intro">
+    <div class="container intro-grid">
+      <div>
+        <p class="eyebrow">Choosing a route</p>
+        <h2>A method is useful when it helps you orient.</h2>
+      </div>
+      <div>
+        <p>
+          Some approaches pay more attention to internal conflict, some to body
+          responses, some to relationships and attachment, and some to what is
+          happening in the present moment.
+        </p>
+        <p>
+          Morgan may use one framework for a while, combine several, or return
+          to straightforward conversation when that is the clearest way to keep
+          moving.
+        </p>
+      </div>
+    </div>
+  </section>
 
- <div>
- <p>
- A concern such as anxiety, grief, trauma, or relationship difficulty
- does not automatically determine one type of therapy. More than one
- approach may be useful at different points in counseling.
- </p>
+  <ScenicBand
+    image="/images/scenes/meadow-feature.jpg"
+    eyebrow="No single path"
+    title="The method should help you find direction—not become the destination."
+    position="center 55%"
+  />
 
- <p>
- These pages are here to explain the methods in plain language so you
- can understand what they involve and ask questions if something
- interests you.
- </p>
- </div>
- </div>
- </section>
+  <section class="approach-index">
+    <div class="container">
+      <div class="index-heading">
+        <p class="eyebrow">Approaches Morgan may draw from</p>
+        <h2>Five ways to enter the work.</h2>
+      </div>
 
- <section class="section section--tint">
- <div class="container">
- <p class="eyebrow">Approaches Morgan may use</p>
- <h2>Explore the methods behind the work.</h2>
+      <div class="approach-list">
+        {
+          approaches.map((approach) => (
+            <a href={approach.href} data-track={`approach-${approach.slug}`}>
+              <div>
+                <h3>{approach.title}</h3>
+                <p>{approach.cardDescription}</p>
+              </div>
+              <b aria-hidden="true">↗</b>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
- <div class="approach-grid">
- {
- approaches.map((approach) => (
- <a
- class="card service-link"
- href={approach.href}
- data-track={`approach-${approach.slug}`}
- >
- <h3>{approach.title}</h3>
- <p>{approach.cardDescription}</p>
- <span class="learn">Learn more →</span>
- </a>
- ))
- }
- </div>
- </div>
- </section>
-
- <section class="section">
- <div class="container grid grid--2">
- <div>
- <p class="eyebrow">Choosing an approach</p>
- <h2>The method is only one part of therapy.</h2>
- </div>
-
- <div>
- <p>
- Morgan considers the concern being discussed, how a client responds to
- the work, personal preferences, readiness, and what seems useful as
- counseling develops.
- </p>
-
- <p>
- You can also say when something does not make sense or does not feel
- like a good fit. Therapy can be adjusted as the work continues.
- </p>
-
- <div class="overview-links">
- <a class="link-arrow" href="/services/">
- Explore areas of support
- </a>
-
- <a class="link-arrow" href="/about/morgan-hale/">
- Learn more about Morgan
- </a>
- </div>
- </div>
- </div>
- </section>
+  <section class="approach-close">
+    <div class="container close-grid">
+      <blockquote>
+        You do not need to know the name of the path before you know something needs to change.
+      </blockquote>
+      <div>
+        <p>
+          Therapy can begin with the concern itself. Morgan can explain why a
+          particular approach might be useful and what other options are
+          available if it does not fit.
+        </p>
+        <div class="close-links">
+          <a href="/services/">Explore services →</a>
+          <a href="/about/morgan-hale/">Meet Morgan →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
- .approach-grid{
- display:grid;
- gap:.75rem;
- margin-top:2rem
- }
+  .approach-intro,
+  .approach-index,
+  .approach-close {
+    padding:clamp(4.5rem,8vw,7rem) 0;
+  }
 
- .approach-grid a{
- display:block;
- text-decoration:none
- }
+  .intro-grid,
+  .close-grid {
+    display:grid;
+    gap:2.5rem;
+  }
 
- .approach-grid h3{
- margin-bottom:.6rem
- }
+  .approach-intro h2,
+  .index-heading h2,
+  .approach-close blockquote {
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:500;
+    letter-spacing:-.04em;
+  }
 
- .learn{
- display:inline-block;
- margin-top:.5rem;
- color:var(--sage-dark);
- font-size:.9rem;
- font-weight:750
- }
+  .approach-intro h2 {
+    max-width:13ch;
+    font-size:clamp(2.6rem,5vw,4.8rem);
+    line-height:.98;
+  }
 
- .overview-links{
- display:grid;
- gap:.5rem;
- margin-top:1.25rem
- }
+  .approach-index {
+    background:#eef0e9;
+  }
 
- @media(min-width:48rem){
- .approach-grid{
- grid-template-columns:repeat(2,1fr)
- }
- }
+  .index-heading {
+    margin-bottom:2.5rem;
+  }
 
- @media(min-width:64rem){
- .approach-grid{
- grid-template-columns:repeat(3,1fr)
- }
- }
+  .index-heading h2 {
+    font-size:clamp(2.8rem,5vw,4.8rem);
+  }
+
+  .approach-list {
+    display:grid;
+    gap:1rem;
+  }
+
+  .approach-list a {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:1.25rem;
+    align-items:start;
+    padding:1.5rem;
+    border:1px solid #bdc6be;
+    background:rgba(255,255,255,.52);
+    color:#173b3d;
+    text-decoration:none;
+  }
+
+  .approach-list h3 {
+    margin:0 0 .4rem;
+    color:#173b3d;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(1.5rem,2.5vw,2.2rem);
+    font-weight:500;
+  }
+
+  .approach-list p {
+    margin:0;
+    color:#5d6f6a;
+  }
+
+  .approach-list b {
+    color:#a77838;
+    font-size:1.2rem;
+  }
+
+  .approach-list a:hover {
+    border-color:#8ba09a;
+    background:white;
+    color:#173b3d;
+  }
+
+  .approach-close {
+    background:#173b3d;
+    color:#e5ece8;
+  }
+
+  .approach-close blockquote {
+    max-width:12ch;
+    margin:0;
+    color:white;
+    font-size:clamp(2.7rem,5vw,4.8rem);
+    line-height:.98;
+  }
+
+  .close-grid > div {
+    max-width:38rem;
+    align-self:end;
+  }
+
+  .close-links {
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem 1.5rem;
+    margin-top:1.25rem;
+  }
+
+  .close-links a {
+    color:#d4a75d;
+    font-weight:800;
+  }
+
+  @media(min-width:48rem) {
+    .intro-grid,
+    .close-grid {
+      grid-template-columns:1fr 1fr;
+      gap:clamp(3rem,7vw,7rem);
+      align-items:start;
+    }
+
+    .approach-list {
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .approach-list a:nth-child(1),
+    .approach-list a:nth-child(5) {
+      grid-column:span 2;
+    }
+  }
 </style>

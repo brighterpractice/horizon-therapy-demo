@@ -56,7 +56,6 @@ if (path.startsWith('/contact')) {
   <div class="container hero-layout">
     <div class="hero-meta">
       {crumbs && <Breadcrumbs items={crumbs} />}
-
       {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     </div>
 
@@ -71,10 +70,10 @@ if (path.startsWith('/contact')) {
   .scenic-page-hero {
     position: relative;
     display: flex;
-    min-height: clamp(25rem, 48vw, 36rem);
+    min-height: clamp(29rem, 52vw, 39rem);
     align-items: end;
     overflow: hidden;
-    padding: clamp(3rem, 7vw, 6rem) 0;
+    padding: clamp(8.5rem, 11vw, 10rem) 0 clamp(3rem, 7vw, 6rem);
     background-image: var(--hero-image);
     background-position: var(--hero-position);
     background-size: cover;
@@ -128,7 +127,7 @@ if (path.startsWith('/contact')) {
   }
 
   .scenic-page-hero--approaches-overview {
-    min-height: clamp(31rem, 54vw, 42rem);
+    min-height: clamp(33rem, 56vw, 44rem);
   }
 
   @media (min-width:48rem) {
@@ -141,12 +140,13 @@ if (path.startsWith('/contact')) {
 
   @media (max-width:47.999rem) {
     .scenic-page-hero {
-      min-height: 31rem;
+      min-height: 34rem;
+      padding-top: 7rem;
       background-position: center;
     }
 
     .scenic-page-hero--approaches-overview {
-      min-height: 35rem;
+      min-height: 37rem;
     }
 
     .hero-shade {

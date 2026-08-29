@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 920" role="img" aria-labelledby="title desc">
+  <title id="title">Horizon clinician photo placeholder</title>
+  <desc id="desc">Abstract clinician silhouette set against a Montana-inspired mountain horizon in deep teal, sage, cream, and gold.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d3b3b"/>
+      <stop offset="1" stop-color="#1e5552"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#476a63"/>
+      <stop offset="1" stop-color="#294e4a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="920" fill="#f3eee3"/>
+  <rect x="0" y="0" width="800" height="790" fill="url(#sky)"/>
+
+  <circle cx="638" cy="155" r="76" fill="#d8a244"/>
+  <circle cx="638" cy="155" r="112" fill="#d8a244" opacity=".12"/>
+
+  <path d="M0 430 150 274 274 392 392 224 545 396 655 312 800 456V790H0Z" fill="#173b3d" opacity=".72"/>
+  <path d="M0 516 132 400 236 472 354 362 472 462 595 368 800 530V790H0Z" fill="url(#ridge)"/>
+  <path d="M0 620C122 574 212 594 318 634c112 42 240 30 482-34v190H0Z" fill="#73857b" opacity=".68"/>
+
+  <path d="M56 678C190 648 310 653 438 684c124 31 235 30 306 9" fill="none" stroke="#d8a244" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+
+  <g transform="translate(0 18)">
+    <circle cx="395" cy="333" r="104" fill="#eef0e8"/>
+    <path d="M204 704c18-164 88-260 191-260s173 96 191 260" fill="#eef0e8"/>
+    <path d="M266 704c18-106 60-162 129-162s111 56 129 162" fill="#d9dfd8" opacity=".9"/>
+  </g>
+
+  <rect x="0" y="790" width="800" height="130" fill="#173b3d"/>
+  <text x="400" y="846" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3" fill="#d8a244">CLINICIAN PHOTO</text>
+  <text x="400" y="884" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" letter-spacing="2" fill="#dce8e3">BOZEMAN · MONTANA</text>
+</svg>
