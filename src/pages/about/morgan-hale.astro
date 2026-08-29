@@ -33,14 +33,14 @@ const crumbs = [
     <div class="container profile-grid">
       <div class="portrait-frame">
         <img
-          src="/images/demo/clinician-placeholder.svg"
-          width="700"
-          height="780"
+          src="/images/demo/horizon-clinician-placeholder.svg"
+          width="800"
+          height="920"
           loading="lazy"
           decoding="async"
-          alt="Clinician photo placeholder for Morgan Hale, LPC"
+          alt="Horizon-themed clinician photo placeholder for Morgan Hale, LPC"
         />
-        <span>Bozeman, Montana</span>
+        <span>Morgan Hale, LPC · Bozeman, Montana</span>
       </div>
 
       <div class="profile-copy">
@@ -136,7 +136,7 @@ const crumbs = [
   }
 
   .morgan-final {
-    padding:clamp(2.25rem,4vw,3.25rem) 0;
+    padding:clamp(1.15rem,2.2vw,1.7rem) 0;
   }
 
   .profile-grid,
@@ -163,18 +163,18 @@ const crumbs = [
     width:100%;
     aspect-ratio:4/5;
     object-fit:cover;
-    background:#dde4dd;
+    background:#173b3d;
   }
 
   .portrait-frame span {
     display:block;
     margin:0;
-    padding:.8rem 1rem .85rem;
+    padding:.7rem 1rem .75rem;
     background:#173b3d;
     color:#e7efeb;
-    font-size:.76rem;
+    font-size:.72rem;
     font-weight:750;
-    letter-spacing:.1em;
+    letter-spacing:.08em;
     text-transform:uppercase;
   }
 
@@ -212,6 +212,15 @@ const crumbs = [
     color:#e7efeb;
   }
 
+  .morgan-final .final-grid {
+    gap:.75rem 2rem;
+    align-items:center;
+  }
+
+  .morgan-final .eyebrow {
+    margin-bottom:.18rem;
+  }
+
   .morgan-final h2,
   .morgan-final .eyebrow,
   .morgan-final a {
@@ -220,13 +229,15 @@ const crumbs = [
 
   .morgan-final h2 {
     margin-bottom:0;
-    font-size:clamp(1.8rem,3vw,2.8rem);
+    font-size:clamp(1.5rem,2.3vw,2.15rem);
+    line-height:1.05;
   }
 
   .final-links {
-    display:grid;
-    gap:.55rem;
-    align-content:center;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.45rem 1.35rem;
+    align-items:center;
   }
 
   @media(min-width:48rem) {
@@ -241,6 +252,10 @@ const crumbs = [
       grid-template-columns:1fr 1fr;
       gap:clamp(3rem,7vw,7rem);
       align-items:start;
+    }
+
+    .morgan-final .final-grid {
+      grid-template-columns:1.25fr .75fr;
     }
   }
 </style>
