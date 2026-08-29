@@ -20,6 +20,7 @@ export const approaches: Approach[] = [
  {
  slug: 'trauma-therapy',
  title: 'Trauma Therapy',
+ seoTitle: 'Trauma Therapy Approach | Bozeman, MT',
  shortTitle: 'Trauma Therapy',
  href: '/approaches/trauma-therapy/',
  description: 'Learn how Morgan Hale approaches trauma-focused individual counseling in Bozeman, Montana.',
