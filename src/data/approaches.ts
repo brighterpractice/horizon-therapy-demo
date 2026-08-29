@@ -18,35 +18,32 @@ export interface Approach {
 
 export const approaches: Approach[] = [
  {
- title: 'Trauma Therapy',
  slug: 'trauma-therapy',
- href: '/approaches/trauma-therapy/',
+ title: 'Trauma Therapy',
  shortTitle: 'Trauma Therapy',
- description:
- 'Learn about trauma therapy with Morgan Hale, LPC, in Bozeman, Montana.',
- cardDescription:
- 'A supportive approach to understanding distressing experiences and the patterns, emotions, and body responses connected with them.',
- hero:
- 'A thoughtful approach to working with distressing experiences and the ways they may continue to affect daily life.',
- whatItIsTitle: 'A paced approach to understanding the impact of difficult experiences.',
+ href: '/approaches/trauma-therapy/',
+ description: 'Learn how Morgan Hale approaches trauma-focused individual counseling in Bozeman, Montana.',
+ cardDescription: 'A paced way to work with experiences that still shape how the present feels.',
+ hero: 'Trauma work can begin by finding steadier ground in the present before deciding how far back to look.',
+ whatItIsTitle: 'The goal is not to live inside the past. It is to understand why the past still changes the terrain now.',
  whatItIs: [
- 'Trauma therapy focuses on how distressing or overwhelming experiences may continue to influence thoughts, emotions, relationships, body responses, and patterns of coping.',
- 'The work can include building awareness, strengthening a sense of safety, developing practical coping strategies, and exploring difficult experiences at a pace that feels manageable.',
+ 'Trauma therapy looks at the ways overwhelming experiences can continue to influence attention, trust, emotion, body responses, relationships, and everyday choices.',
+ 'Morgan may begin with the effects you are noticing now and gradually explore the experiences behind them when that feels useful and manageable.',
  ],
- sessionTitle: 'Safety, pacing, and trust are part of the process.',
+ sessionTitle: 'Orientation comes before exposure.',
  session: [
- 'Sessions may begin with understanding current concerns, identifying existing strengths and supports, and developing tools for managing distress before moving into more difficult material.',
- 'The pace and focus of therapy can shift over time depending on current circumstances, readiness, and what feels most helpful.',
+ 'Sessions may focus first on what helps you stay connected to the present, recognize when your system is becoming overwhelmed, and regain a sense of choice.',
+ 'Deeper exploration can happen later, at a pace that leaves enough stability to keep the work meaningful rather than simply intense.',
  ],
- considerationsTitle: 'Trauma work is individualized.',
+ considerationsTitle: 'There is more than one route through trauma work.',
  considerations: [
- 'Not every client needs to discuss difficult experiences in detail for therapy to be useful.',
- 'The pace can be adjusted according to readiness, current stressors, and the goals of counseling.',
- 'Other therapeutic approaches may be incorporated when they support the client’s needs and preferences.',
+ 'Detailed retelling is not required for every client or every concern.',
+ 'Pacing can change with current stress, support, and readiness.',
+ 'Other approaches may be woven in when they help make the work more understandable or manageable.',
  ],
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
- { label: 'About Morgan', href: '/about/morgan-hale/' },
+ { label: 'Meet Morgan', href: '/about/morgan-hale/' },
  ],
  },
 
@@ -56,32 +53,29 @@ export const approaches: Approach[] = [
  seoTitle: 'IFS Therapy | Bozeman, MT',
  shortTitle: 'IFS',
  href: '/approaches/internal-family-systems/',
- description:
- 'Learn how Morgan Hale may incorporate Internal Family Systems concepts into individual counseling in Bozeman, Montana.',
- cardDescription:
- 'A framework for noticing different internal parts and protective patterns with curiosity rather than judgment.',
- hero:
- 'A framework for understanding different internal reactions, protective patterns, and conflicting feelings with curiosity.',
- whatItIsTitle: 'Different parts of us can respond in different ways.',
+ description: 'Learn how Morgan Hale may use Internal Family Systems concepts in individual counseling in Bozeman, Montana.',
+ cardDescription: 'A framework for understanding the different internal voices that can pull you in opposite directions.',
+ hero: 'When different parts of you want different things, the conflict itself can become useful information.',
+ whatItIsTitle: 'Internal conflict can be mapped instead of judged.',
  whatItIs: [
- 'Internal Family Systems, often called IFS, offers a way to notice different parts of a person’s internal experience. One part may want change while another feels cautious; another may criticize, avoid, please, control, or stay alert in an effort to protect.',
- 'Rather than immediately trying to eliminate these reactions, IFS work can help explore what they may be protecting against, what they need, and how they developed.',
+ 'IFS offers a way to notice the different reactions inside a person—the part that wants change, the part that fears it, the part that criticizes, the part that avoids, or the part that tries to keep everything under control.',
+ 'Morgan may use this framework to understand what each reaction is protecting and how those internal roles developed over time.',
  ],
- sessionTitle: 'The work can begin with noticing what is happening now.',
+ sessionTitle: 'The work often begins by slowing down a familiar reaction.',
  session: [
- 'Morgan may help clients notice thoughts, emotions, physical cues, or internal reactions that seem to pull in different directions and explore what those responses may be trying to accomplish.',
- 'The work may involve understanding protective patterns and developing a less adversarial relationship with reactions that have felt frustrating, confusing, or difficult to change.',
+ 'Rather than arguing with a reaction, Morgan may help you notice what it expects, what it fears, and what it is trying to prevent.',
+ 'That perspective can make it easier to respond with curiosity and choice instead of treating part of yourself as an obstacle to overcome.',
  ],
- considerationsTitle: 'IFS is one framework among several.',
+ considerationsTitle: 'The map is useful only if it helps you navigate.',
  considerations: [
- 'Clients do not need to use IFS terminology for the work to be useful.',
- 'The approach can be adapted to the individual and the focus of counseling.',
- 'Morgan may combine IFS concepts with other approaches when that better fits the client.',
+ 'You do not have to use IFS terminology outside therapy.',
+ 'The framework can be combined with body awareness, mindfulness, and direct conversation.',
+ 'If the language does not fit, Morgan can describe the same pattern another way.',
  ],
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
  { label: 'Relationship Concerns', href: '/services/relationship-concerns/' },
- { label: 'Self-Esteem & Personal Growth', href: '/services/self-esteem-personal-growth/' },
+ { label: 'Meet Morgan', href: '/about/morgan-hale/' },
  ],
  },
 
@@ -91,32 +85,29 @@ export const approaches: Approach[] = [
  seoTitle: 'Somatic Experiencing Therapy | Bozeman, MT',
  shortTitle: 'Somatic Experiencing',
  href: '/approaches/somatic-experiencing/',
- description:
- 'Learn how Morgan Hale may incorporate Somatic Experiencing and body-informed approaches into individual counseling in Bozeman, Montana.',
- cardDescription:
- 'An approach that includes attention to physical sensations and body responses alongside thoughts and emotions.',
- hero:
- 'An approach that includes physical sensations and nervous-system responses alongside thoughts, emotions, and experiences.',
- whatItIsTitle: 'Emotional experiences can also have a physical dimension.',
+ description: 'Learn how Morgan Hale may use Somatic Experiencing and body-informed practices in counseling in Bozeman, Montana.',
+ cardDescription: 'A way to notice the physical signals that can narrow or widen your sense of choice.',
+ hero: 'The body often knows that something has changed before the mind has found words for it.',
+ whatItIsTitle: 'Physical responses can help reveal where your system feels safe, activated, or shut down.',
  whatItIs: [
- 'Stress, emotion, and difficult experiences can show up physically through tension, breathing changes, restlessness, numbness, tightness, changes in energy, or other body sensations.',
- 'Morgan may incorporate Somatic Experiencing and other body-informed practices to notice these responses, understand what seems to activate or settle them, and include the body as one source of information during counseling.',
+ 'Stress and emotion can show up as tension, changes in breathing, restlessness, numbness, heaviness, changes in energy, or the urge to move away from something.',
+ 'Morgan may use body-informed practices to notice those shifts and understand what helps your system regain enough steadiness to stay present.',
  ],
- sessionTitle: 'Body awareness is introduced gently.',
+ sessionTitle: 'The body can be observed without becoming the entire focus.',
  session: [
- 'When it is useful, Morgan may invite attention to physical sensations, movement, breathing, posture, or changes in the body while discussing an experience.',
- 'Clients remain in control of the pace. Attention to body sensations can be brief, adjusted, or set aside when it does not feel useful.',
+ 'A session might include briefly noticing a sensation, posture, breath, or movement while talking about an experience.',
+ 'Attention can return to ordinary conversation at any time. The practice is meant to support orientation and choice, not create another task to perform correctly.',
  ],
- considerationsTitle: 'The body is one source of information.',
+ considerationsTitle: 'Use physical information as one point on the map.',
  considerations: [
- 'Body-informed therapy does not assume that every concern has a physical cause or that every client needs to focus on body sensations.',
- 'Body awareness can be combined with conversation, reflection, IFS, mindfulness, or other counseling approaches.',
- 'The focus remains on what is useful and appropriate for the individual client.',
+ 'Not every concern needs body-focused work.',
+ 'Sensations do not have to be interpreted in one particular way.',
+ 'Body awareness can be combined with IFS, mindfulness, reflection, and practical problem-solving.',
  ],
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
  { label: 'Anxiety & Stress', href: '/services/anxiety-stress/' },
- { label: 'About Morgan', href: '/about/morgan-hale/' },
+ { label: 'Meet Morgan', href: '/about/morgan-hale/' },
  ],
  },
 
@@ -126,32 +117,29 @@ export const approaches: Approach[] = [
  seoTitle: 'EFT for Individuals in Bozeman, MT',
  shortTitle: 'EFT',
  href: '/approaches/emotionally-focused-therapy/',
- description:
- 'Learn how Morgan Hale may use Emotionally Focused Therapy principles in individual counseling for adults in Bozeman, Montana.',
- cardDescription:
- 'An emotion- and attachment-focused approach for understanding patterns that can affect connection and relationships.',
- hero:
- 'An approach for understanding emotional responses, attachment needs, and recurring patterns in important relationships.',
- whatItIsTitle: 'Emotions can provide useful information about connection and protection.',
+ description: 'Learn how Morgan Hale may use emotion- and attachment-focused ideas in individual counseling in Bozeman, Montana.',
+ cardDescription: 'An approach for tracing relationship reactions back to the needs and fears underneath them.',
+ hero: 'Relationship patterns can feel inevitable until you can see the route they take from trigger to reaction.',
+ whatItIsTitle: 'Emotions can point toward what connection, safety, or distance means to you.',
  whatItIs: [
- 'Emotionally Focused Therapy, or EFT, pays close attention to emotional experience and patterns involving closeness, safety, conflict, vulnerability, attachment, and connection.',
- 'At Horizon Therapy, Morgan uses these concepts within individual counseling. Horizon Therapy is not offering couples therapy through this service.',
+ 'Emotionally focused work pays attention to the patterns that emerge when closeness, trust, vulnerability, or conflict feels uncertain.',
+ 'At Horizon, Morgan uses these ideas in individual counseling to help clients understand their own reactions and needs. This is not couples therapy.',
  ],
- sessionTitle: 'The work may explore patterns beneath the surface.',
+ sessionTitle: 'The work traces the pattern instead of stopping at the argument.',
  session: [
- 'Morgan may help clients notice recurring emotional responses in relationships, identify needs beneath those reactions, and understand what happens when connection feels uncertain, unsafe, or difficult.',
- 'The work may include present relationships as well as earlier experiences that influenced expectations about closeness, trust, conflict, or emotional safety.',
+ 'Morgan may help you notice what happens before a familiar relationship response, what emotion appears first, and what need or fear may be underneath it.',
+ 'Earlier relationships can be relevant when they help explain why a current situation feels so familiar or intense.',
  ],
- considerationsTitle: 'EFT principles can be integrated with individual therapy.',
+ considerationsTitle: 'Understanding the route does not decide the destination for you.',
  considerations: [
- 'Relationship concerns can be explored in individual counseling without another person participating in the session.',
- 'The goal is not to assign blame for relationship difficulties.',
- 'Other approaches may be incorporated depending on the client and the focus of therapy.',
+ 'Relationship concerns can be explored in individual counseling.',
+ 'The work is not about assigning blame.',
+ 'Choices about a relationship remain yours.',
  ],
  related: [
  { label: 'Relationship Concerns', href: '/services/relationship-concerns/' },
  { label: 'Individual Therapy', href: '/services/individual-therapy/' },
- { label: 'About Morgan', href: '/about/morgan-hale/' },
+ { label: 'Meet Morgan', href: '/about/morgan-hale/' },
  ],
  },
 
@@ -161,32 +149,29 @@ export const approaches: Approach[] = [
  seoTitle: 'Mindfulness-Informed Therapy | Bozeman, MT',
  shortTitle: 'Mindfulness',
  href: '/approaches/mindfulness-based-therapy/',
- description:
- 'Learn how Morgan Hale may incorporate mindfulness, meditation experience, and body awareness into individual counseling in Bozeman, Montana.',
- cardDescription:
- 'Present-moment awareness practices that can support noticing thoughts, emotions, and body cues with greater clarity.',
- hero:
- 'Using present-moment awareness to notice thoughts, emotions, sensations, and reactions more clearly.',
- whatItIsTitle: 'Mindfulness can create space around an experience.',
+ description: 'Learn how Morgan Hale may use mindfulness and present-moment awareness in individual counseling in Bozeman, Montana.',
+ cardDescription: 'Brief practices for returning attention to the moment you are actually in.',
+ hero: 'Sometimes perspective changes when attention comes back from the future or the past to the ground beneath you now.',
+ whatItIsTitle: 'Mindfulness can be a way of reorienting, not a demand to become calm.',
  whatItIs: [
- 'Mindfulness involves intentionally noticing present-moment experience. In counseling, that may include thoughts, emotions, physical sensations, impulses, breathing, or patterns of attention.',
- 'Mindfulness-based work may include developing greater awareness of thoughts, emotions, physical sensations, and patterns of reaction without requiring a particular meditation practice.',
+ 'Mindfulness means noticing present experience intentionally. In therapy that may include thoughts, emotions, breathing, sensations, impulses, or where attention keeps wandering.',
+ 'The purpose is not to empty the mind. It is to notice what is happening with enough clarity to choose what you want to do next.',
  ],
- sessionTitle: 'Mindfulness is adapted to the person.',
+ sessionTitle: 'The practice can be brief enough to fit inside an ordinary conversation.',
  session: [
- 'Mindfulness in counseling does not require sitting silently or trying to empty the mind. It may involve briefly noticing a reaction, observing a body sensation, paying attention to breathing, or slowing down enough to identify what is happening.',
- 'Mindfulness practices can be brief and can be adjusted according to comfort, preferences, and the focus of the session.',
+ 'Morgan may invite a short pause to notice a reaction, breath, sensation, or thought and then return to the topic being discussed.',
+ 'These small moments can make automatic responses easier to recognize before they determine the rest of the interaction.',
  ],
- considerationsTitle: 'Mindfulness can be used when it supports the work.',
+ considerationsTitle: 'Mindfulness is a tool, not a personality type.',
  considerations: [
- 'Clients do not need prior meditation experience.',
- 'Mindfulness practices can be brief and practical.',
- 'They may be combined with other therapeutic approaches rather than used as a stand-alone method.',
+ 'No meditation background is required.',
+ 'Practices can be short and practical.',
+ 'Mindfulness can be combined with other approaches rather than used on its own.',
  ],
  related: [
  { label: 'Anxiety & Stress', href: '/services/anxiety-stress/' },
- { label: 'Grief & Loss', href: '/services/grief-loss/' },
- { label: 'Self-Esteem & Personal Growth', href: '/services/self-esteem-personal-growth/' },
+ { label: 'Life Transitions', href: '/services/life-transitions/' },
+ { label: 'Meet Morgan', href: '/about/morgan-hale/' },
  ],
  },
 ];
