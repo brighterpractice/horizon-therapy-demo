@@ -58,13 +58,12 @@ const publishedServices = services.filter((service) => service.published);
 
       <div class="service-list">
         {
-          publishedServices.map((service, index) => (
+          publishedServices.map((service) => (
             <a
               href={service.href}
               data-track={`service-${service.slug}`}
               aria-label={`Learn more about ${service.title}`}
             >
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -154,20 +153,13 @@ const publishedServices = services.filter((service) => service.published);
 
   .service-list a {
     display:grid;
-    grid-template-columns:3rem 1fr auto;
-    gap:1rem;
-    align-items:start;
+    grid-template-columns:1fr auto;
+    gap:1.25rem;
+    align-items:center;
     padding:1.4rem 0;
     border-bottom:1px solid #aebbb6;
     color:#173b3d;
     text-decoration:none;
-  }
-
-  .service-list span {
-    color:#a77838;
-    font-size:.72rem;
-    font-weight:850;
-    letter-spacing:.08em;
   }
 
   .service-list h3 {
@@ -230,14 +222,11 @@ const publishedServices = services.filter((service) => service.published);
       align-items:start;
     }
 
-    .service-list a {
-      grid-template-columns:4rem minmax(16rem,.75fr) minmax(20rem,1.25fr) auto;
+    .service-list a > div {
+      display:grid;
+      grid-template-columns:minmax(16rem,.75fr) minmax(20rem,1.25fr);
       gap:1.5rem;
       align-items:center;
-    }
-
-    .service-list a > div {
-      display:contents;
     }
 
     .service-list h3 { margin:0; }
