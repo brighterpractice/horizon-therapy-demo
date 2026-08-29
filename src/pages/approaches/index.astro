@@ -57,9 +57,8 @@ const crumbs = [{ label: 'Approaches' }];
 
       <div class="approach-list">
         {
-          approaches.map((approach, index) => (
+          approaches.map((approach) => (
             <a href={approach.href} data-track={`approach-${approach.slug}`}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <h3>{approach.title}</h3>
                 <p>{approach.cardDescription}</p>
@@ -138,20 +137,14 @@ const crumbs = [{ label: 'Approaches' }];
 
   .approach-list a {
     display:grid;
-    grid-template-columns:3rem 1fr auto;
-    gap:1rem;
+    grid-template-columns:1fr auto;
+    gap:1.25rem;
     align-items:start;
     padding:1.5rem;
     border:1px solid #bdc6be;
     background:rgba(255,255,255,.52);
     color:#173b3d;
     text-decoration:none;
-  }
-
-  .approach-list span {
-    color:#a77838;
-    font-size:.72rem;
-    font-weight:850;
   }
 
   .approach-list h3 {
